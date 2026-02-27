@@ -3,15 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <title>404 INDUSTRY</title>
+
+<!-- Favicon (même image que le logo en arrière-plan) -->
+<link rel="icon" type="image/png" href="logo.png">
+
+<!-- Police Google Fonts style gang -->
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
 <style>
 /* === Background & Layout === */
 body{
     margin:0;
     padding:0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Anton', Arial, sans-serif; /* police style gang */
     color: white;
     text-align:center;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('logo.png'); /* ton logo en arrière-plan */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('logo.png'); /* logo en arrière-plan */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -22,46 +29,48 @@ body{
     align-items: center;
 }
 
-/* === Neon Text === */
+/* === Neon White Text === */
 h1 {
     font-size: 70px;
     color: #fff;
     text-shadow:
         0 0 5px #fff,
         0 0 10px #fff,
-        0 0 20px #ff0000,
-        0 0 30px #ff0000,
-        0 0 40px #ff0000,
-        0 0 55px #ff0000,
-        0 0 75px #ff0000;
+        0 0 20px #fff,
+        0 0 30px #fff,
+        0 0 40px #fff,
+        0 0 55px #fff,
+        0 0 75px #fff;
+    letter-spacing: 3px;
 }
 
-/* Subtitle */
+/* Subtitle / slogan */
 p {
     font-size: 24px;
     color: #ccc;
     text-shadow: 0 0 5px #fff;
+    margin-top: 20px;
 }
 
 /* Neon Button */
 .btn {
     display:inline-block;
     margin-top:40px;
-    padding:15px 40px;
+    padding:15px 50px;
     color:white;
     background:transparent;
-    border:2px solid #ff0000;
+    border:2px solid #fff;
     text-decoration:none;
     font-weight:bold;
     border-radius:5px;
-    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
     transition: 0.3s;
 }
 
 .btn:hover {
-    background:#ff0000;
+    background:white;
     color:black;
-    box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #ff0000;
+    box-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 60px #fff;
 }
 
 /* Footer */
@@ -77,8 +86,8 @@ p {
 <body>
 
 <h1>404 INDUSTRY</h1>
-<p>DRILL • GANG • NEON VIBES</p>
-<a href="#" class="btn">ENTER THE ZONE</a>
+<p>VISION • DISCIPLINE • IMPACT</p>
+<a href="#" class="btn">PLONGE DANS L'UNIVERS 404</a>
 
 <div class="footer">
 © 2026 404 INDUSTRY — All Rights Reserved
