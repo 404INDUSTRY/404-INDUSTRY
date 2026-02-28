@@ -19,6 +19,7 @@ body{
     overflow-x:hidden;
 }
 
+/* CONTENEUR */
 .container{
     max-width:900px;
     margin:auto;
@@ -28,7 +29,7 @@ body{
 h1{
     font-size:48px;
     text-align:center;
-    margin-bottom:60px;
+    margin-bottom:40px;
 }
 
 h2{
@@ -50,7 +51,7 @@ p{
     margin:60px 0;
 }
 
-/* ANIMATION */
+/* ANIMATION APPARITION */
 .reveal{
     opacity:0;
     transform:translateY(40px);
@@ -83,17 +84,53 @@ p{
     color:black;
     box-shadow:0 0 30px #00f2ff;
 }
+
+/* GRILLE DES 3 CADRES */
+.grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:50px;
+    gap:25px;
+}
+
+.card{
+    background: rgba(0,0,0,0.7);
+    border:2px solid #00f2ff;
+    width:260px;
+    height:120px;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    letter-spacing:1px;
+    transition: all 0.4s;
+    box-shadow:0 0 15px #00f2ff;
+}
+
+.card:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 40px #00f2ff;
+    border-color:#fff;
+}
 </style>
 </head>
 
 <body>
 
+<!-- BOUTON RETOUR -->
 <a href="index.html" class="btn-retour">← RETOUR</a>
 
 <div class="container">
 
+<!-- TITRE PAGE -->
 <h1 class="reveal">🚧 404 INDUSTRY</h1>
 
+<!-- PRESENTATION DU LABEL -->
 <div class="reveal">
 <p>
 <strong>404 INDUSTRY</strong> est un label musical indépendant basé en Côte d’Ivoire 🇨🇮.<br><br>
@@ -105,6 +142,7 @@ Un label créé pour produire, développer et imposer des artistes sur la scène
 
 <div class="divider"></div>
 
+<!-- À LA TÊTE -->
 <div class="reveal">
 <h2>🧠 À LA TÊTE</h2>
 <p>
@@ -116,76 +154,28 @@ Un label créé pour produire, développer et imposer des artistes sur la scène
 
 <div class="divider"></div>
 
+<!-- VISION -->
 <div class="reveal">
 <h2>🎯 VISION</h2>
 <p>
 S’imposer dans le game musical international.<br>
 Exporter l’identité ivoirienne au-delà des frontières.<br>
-Construire une marque respectée et influente.<br><br>
-👁️ Voir grand. Penser global. Agir stratégique.
+Construire une marque respectée et influente.
 </p>
 </div>
 
 <div class="divider"></div>
 
-<div class="reveal">
-<h2>🥷 DISCIPLINE</h2>
-<p>
-Travail constant. Mentalité conquérante.<br>
-Aucune place pour la faiblesse.<br><br>
-Ici, le succès se mérite.
-</p>
+<!-- GRILLE DES 3 CADRES DANS L’ORDRE EXACT -->
+<div class="grid reveal">
+    <a href="404industry.html" class="card">404 INDUSTRY</a>
+    <a href="nproduction.html" class="card">N PRODUCTION</a>
+    <a href="rmanagement.html" class="card">R MANAGEMENT</a>
 </div>
 
 <div class="divider"></div>
 
-<div class="reveal">
-<h2>💥 IMPACT</h2>
-<p>
-Des sons qui marquent.<br>
-Des mélodies qui restent.<br>
-Une signature sonore reconnaissable.
-</p>
-</div>
-
-<div class="divider"></div>
-
-<div class="reveal">
-<h2>🧨 IDENTITÉ</h2>
-<p>
-🖤 Univers gang<br>
-🔥 Attitude affirmée<br>
-🎵 Fusion entre puissance brute et émotion mélodique<br><br>
-La rue donne la force.<br>
-La musique donne l’âme.
-</p>
-</div>
-
-<div class="divider"></div>
-
-<div class="reveal">
-<h2>🎤 ARTISTES</h2>
-<p>
-<strong>LEROI 👑</strong><br>
-Puissance. Autorité. Flow dominant.<br><br>
-<strong>ONYX 🎶🖤</strong><br>
-Mélodies profondes. Ambiances planantes. Émotions sincères.
-</p>
-</div>
-
-<div class="divider"></div>
-
-<div class="reveal">
-<h2>📜 DEVISE</h2>
-<p>
-Peu importe qui tu es.<br>
-Peu importe ton statut.<br><br>
-Si le respect n’est pas à la table… prends la porte. 🚪
-</p>
-</div>
-
-<div class="divider"></div>
-
+<!-- FOOTER -->
 <div class="reveal">
 <h2 style="text-align:center;">🚀 404 INDUSTRY — Label musical. Vision. Discipline. Impact.</h2>
 </div>
@@ -193,6 +183,7 @@ Si le respect n’est pas à la table… prends la porte. 🚪
 </div>
 
 <script>
+// ANIMATION PROGRESSIVE DES ELEMENTS
 function revealOnScroll(){
     const reveals=document.querySelectorAll('.reveal');
     reveals.forEach(el=>{
