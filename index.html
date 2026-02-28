@@ -4,91 +4,178 @@
 <meta charset="UTF-8">
 <title>404 INDUSTRY</title>
 
-<!-- Favicon (même image que le logo en arrière-plan) -->
+<!-- Favicon -->
 <link rel="icon" type="image/png" href="logo.png">
 
-<!-- Police Google Fonts style gang -->
+<!-- Google Font style gang -->
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
 <style>
-/* === Background & Layout === */
 body{
     margin:0;
     padding:0;
-    font-family: 'Anton', Arial, sans-serif; /* police style gang */
+    font-family: 'Anton', Arial, sans-serif;
     color: white;
-    text-align:center;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('logo.png'); /* logo en arrière-plan */
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('logo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    text-align:center;
+}
+
+/* Container principal */
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    height: 70vh; /* occupe la majorité de la page */
 }
 
-/* === Neon White Text === */
+/* Titre principal neon noir */
 h1 {
     font-size: 70px;
     color: #fff;
     text-shadow:
-        0 0 5px #fff,
-        0 0 10px #fff,
-        0 0 20px #fff,
-        0 0 30px #fff,
-        0 0 40px #fff,
-        0 0 55px #fff,
-        0 0 75px #fff;
+        0 0 5px #000,
+        0 0 10px #000,
+        0 0 20px #000,
+        0 0 30px #000,
+        0 0 40px #000,
+        0 0 55px #000,
+        0 0 75px #000;
     letter-spacing: 3px;
 }
 
-/* Subtitle / slogan */
-p {
+/* Slogan */
+p.subtitle {
     font-size: 24px;
     color: #ccc;
-    text-shadow: 0 0 5px #fff;
-    margin-top: 20px;
+    text-shadow: 0 0 5px #000;
+    margin-top: 10px;
 }
 
-/* Neon Button */
+/* Bouton neon noir */
 .btn {
     display:inline-block;
     margin-top:40px;
     padding:15px 50px;
     color:white;
     background:transparent;
-    border:2px solid #fff;
+    border:2px solid #000;
     text-decoration:none;
     font-weight:bold;
     border-radius:5px;
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+    box-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000;
     transition: 0.3s;
 }
 
 .btn:hover {
-    background:white;
-    color:black;
-    box-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 60px #fff;
+    background:#000;
+    color:white;
+    box-shadow: 0 0 20px #000, 0 0 40px #000, 0 0 60px #000;
+}
+
+/* À propos */
+.section{
+    padding:50px 20px;
+}
+
+.section h2{
+    font-size:50px;
+    color:white;
+    text-shadow:0 0 10px #000;
+    margin-bottom:20px;
+}
+
+.section p{
+    font-size:18px;
+    color:#ccc;
+    text-shadow:0 0 5px #000;
+    line-height:1.6;
+}
+
+/* Cadres du bas */
+.cadres{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+@media(min-width:768px){
+    .cadres{
+        flex-direction: row;
+    }
+}
+
+.cadre{
+    background: rgba(0,0,0,0.6);
+    border: 2px solid #000;
+    padding: 30px;
+    border-radius: 15px;
+    flex:1;
+    box-shadow: 0 0 20px #000, 0 0 40px #000;
+    text-align: center;
+}
+
+.cadre h2{
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+    margin-bottom: 15px;
+}
+
+.cadre p{
+    font-size: 18px;
+    color: #ccc;
+    text-shadow: 0 0 5px #000;
+    line-height: 1.6;
 }
 
 /* Footer */
 .footer{
-    position:absolute;
-    bottom:20px;
+    background: rgba(0,0,0,0.7);
+    padding:20px;
     font-size:14px;
     color:#aaa;
+    text-align:center;
 }
 </style>
 </head>
 
 <body>
 
-<h1>404 INDUSTRY</h1>
-<p>VISION • DISCIPLINE • IMPACT</p>
-<a href="#" class="btn">PLONGE DANS L'UNIVERS 404</a>
+<div class="container">
+    <h1>404 INDUSTRY</h1>
+    <p class="subtitle">VISION • DISCIPLINE • IMPACT</p>
+    <a href="univers404.html" class="btn">PLONGE DANS L'UNIVERS 404</a>
+</div>
 
+<!-- À propos -->
+<div class="section">
+    <h2>À propos</h2>
+    <p>404 INDUSTRY est un label indépendant émergent dans la scène musicale ivoirienne, créé le 02/01/2025. Nous imposons notre style unique, brut et authentique, pour marquer la scène locale et internationale.</p>
+</div>
+
+<!-- Cadres du bas -->
+<div class="section cadres">
+    <div class="cadre">
+        <h2>404 INDUSTRY</h2>
+        <p>404 INDUSTRY est un label indépendant émergent dans la scène musicale ivoirienne, créé le 02/01/2025. Nous imposons notre style unique, brut et authentique, pour marquer la scène locale et internationale.</p>
+    </div>
+
+    <div class="cadre">
+        <h2>Notre But</h2>
+        <p>Notre but est de s’imposer brutalement avec une identité violente et inspirer la nouvelle génération à travers notre musique et notre vision sans compromis.</p>
+    </div>
+</div>
+
+<!-- Footer -->
 <div class="footer">
 © 2026 404 INDUSTRY — All Rights Reserved
 </div>
