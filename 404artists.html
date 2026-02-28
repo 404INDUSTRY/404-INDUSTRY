@@ -19,7 +19,7 @@ body{
 }
 
 .container{
-    max-width:1000px;
+    max-width:900px;
     margin:auto;
     text-align:center;
 }
@@ -28,11 +28,11 @@ body{
 #main-title{
     font-size:64px;
     margin-top:100px;
-    color:#ff00ff;
+    color:#00f2ff;
     opacity:0;
     transform:translateY(-100px) rotateX(45deg);
     transition: all 1.5s ease;
-    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+    text-shadow: 0 0 10px #00f2ff, 0 0 20px #00f2ff, 0 0 30px #00f2ff;
 }
 
 /* BOUTON RETOUR */
@@ -48,12 +48,10 @@ body{
     font-size:14px;
     letter-spacing:2px;
     transition:0.3s;
-    box-shadow:0 0 15px #ff00ff;
 }
 .btn-retour:hover{
     background:white;
     color:black;
-    box-shadow:0 0 30px #ff00ff;
 }
 
 /* GRILLE DES CADRES HORIZONTALE */
@@ -78,12 +76,14 @@ body{
     font-weight:bold;
     letter-spacing:1px;
     transition: all 0.4s;
-    box-shadow:0 0 15px #00ffff;
+    background: rgba(0,0,0,0.7);
+    border:2px solid;
+    box-shadow:0 0 15px;
 }
 
-.card1{ background:#ff4d4d; border:2px solid #ff4d4d; box-shadow:0 0 20px #ff4d4d; }
-.card2{ background:#4dff88; border:2px solid #4dff88; box-shadow:0 0 20px #4dff88; }
-.card3{ background:#4d79ff; border:2px solid #4d79ff; box-shadow:0 0 20px #4d79ff; }
+.card1{ border-color:#00f2ff; box-shadow:0 0 25px #00f2ff; }
+.card2{ border-color:#ff00ff; box-shadow:0 0 25px #ff00ff; }
+.card3{ border-color:#00ff88; box-shadow:0 0 25px #00ff88; }
 
 .card:hover{
     transform:scale(1.05);
