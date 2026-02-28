@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>ONYX – 404 INDUSTRY</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    padding:60px 20px;
+    font-family:'Montserrat', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.95)), url('logo.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+    overflow-x:hidden;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+#main-title{
+    font-size:65px;
+    margin-top:120px;
+    color:#b300ff;
+    opacity:0;
+    transform:translateY(-120px) rotateX(45deg);
+    transition:1.5s ease;
+    text-shadow:0 0 15px #b300ff,0 0 40px #b300ff;
+}
+
+.description{
+    margin-top:70px;
+    line-height:2;
+    font-size:18px;
+    opacity:0;
+    transform:translateY(50px);
+    transition:1.2s ease;
+}
+
+.description.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.highlight{
+    margin-top:40px;
+    font-weight:600;
+    font-size:20px;
+    color:#b300ff;
+    text-shadow:0 0 10px #b300ff;
+}
+
+.platforms{
+    margin-top:60px;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    font-size:35px;
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s ease;
+}
+
+.platforms.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.platforms a{
+    color:white;
+    transition:0.3s;
+}
+
+.platforms a:hover{
+    color:#b300ff;
+    transform:scale(1.2);
+    text-shadow:0 0 15px #b300ff;
+}
+
+.btn-retour{
+    position:fixed;
+    top:25px;
+    left:25px;
+    padding:12px 28px;
+    border:2px solid white;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.btn-retour:hover{
+    background:white;
+    color:black;
+}
+</style>
+</head>
+
+<body>
+
+<a href="404artists.html" class="btn-retour">← RETOUR</a>
+
+<div class="container">
+
+    <h1 id="main-title">ONYX 🎶🌑</h1>
+
+    <div class="description" id="desc">
+
+        <p>
+        Artiste du premier collectif de 404 Industry, ONYX apporte la mélodie là où l’émotion rencontre la rue.
+        Sa force ? Transformer les réalités brutes en harmonies profondes.
+        </p>
+
+        <p>
+        Sa voix glisse sur les prods avec finesse, entre mélancolie et détermination.
+        Chaque refrain reste en tête, chaque couplet touche. 💫
+        </p>
+
+        <p class="highlight">
+        ONYX ne crie pas pour exister — il fait vibrer pour marquer.
+        </p>
+
+        <p>
+        Mélodieux, authentique, impactant.
+        </p>
+
+        <p class="highlight">
+        Une énergie sombre. <br>
+        Une âme musicale. <br>
+        Une signature unique. 🎧✨
+        </p>
+
+    </div>
+
+    <!-- PLATEFORMES -->
+    <div class="platforms" id="platforms">
+
+        <a href="https://open.spotify.com/artist/4Ox0x3A45sHlqzmPBUvqbK?si=FbKz7TDDR3mTj7owvXMMXA" target="_blank">
+            <i class="fab fa-spotify"></i>
+        </a>
+
+        <a href="https://music.apple.com/us/artist/%C3%B6nyx/1863758160" target="_blank">
+            <i class="fab fa-apple"></i>
+        </a>
+
+        <a href="https://youtube.com/@404__onyx?si=-adikvDgY7sXAgNW" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@onyx_la_melo?_r=1&_t=ZS-94JEP2W1uoK" target="_blank">
+            <i class="fab fa-tiktok"></i>
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+window.addEventListener('load', () => {
+    const title = document.getElementById('main-title');
+    const desc = document.getElementById('desc');
+    const platforms = document.getElementById('platforms');
+
+    title.style.opacity = '1';
+    title.style.transform = 'translateY(0) rotateX(0deg)';
+
+    setTimeout(() => {
+        desc.classList.add('active');
+    }, 700);
+
+    setTimeout(() => {
+        platforms.classList.add('active');
+    }, 1200);
+});
+</script>
+
+</body>
+</html>
