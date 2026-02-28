@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>LEROI – 404 INDUSTRY</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    padding:60px 20px;
+    font-family:'Montserrat', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.95)), url('logo.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+    overflow-x:hidden;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+#main-title{
+    font-size:65px;
+    margin-top:120px;
+    color:#00f2ff;
+    opacity:0;
+    transform:translateY(-120px) rotateX(45deg);
+    transition:1.5s ease;
+    text-shadow:0 0 15px #00f2ff,0 0 40px #00f2ff;
+}
+
+.description{
+    margin-top:70px;
+    line-height:2;
+    font-size:18px;
+    opacity:0;
+    transform:translateY(50px);
+    transition:1.2s ease;
+}
+
+.description.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.highlight{
+    margin-top:40px;
+    font-weight:600;
+    font-size:20px;
+    color:#00f2ff;
+    text-shadow:0 0 10px #00f2ff;
+}
+
+.platforms{
+    margin-top:60px;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    font-size:35px;
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s ease;
+}
+
+.platforms.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.platforms a{
+    color:white;
+    transition:0.3s;
+}
+
+.platforms a:hover{
+    color:#00f2ff;
+    transform:scale(1.2);
+    text-shadow:0 0 15px #00f2ff;
+}
+
+.btn-retour{
+    position:fixed;
+    top:25px;
+    left:25px;
+    padding:12px 28px;
+    border:2px solid white;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.btn-retour:hover{
+    background:white;
+    color:black;
+}
+</style>
+</head>
+
+<body>
+
+<a href="404artists.html" class="btn-retour">← RETOUR</a>
+
+<div class="container">
+
+    <h1 id="main-title">LEROI 👑🔥</h1>
+
+    <div class="description" id="desc">
+
+        <p>
+        Artiste du premier collectif du label 404 Industry, LEROI incarne la vision, la discipline et l’impact.
+        Sa musique est une déclaration d’autorité : un mélange d’énergie brute, de lucidité et d’ambition assumée.
+        </p>
+
+        <p>
+        Son univers ? Réel, puissant, sans filtre.
+        Chaque son est une prise de position.
+        Chaque texte reflète un mental forgé par l’expérience.
+        </p>
+
+        <p class="highlight">
+        LEROI ne suit pas la vague — il impose sa direction.
+        </p>
+
+        <p>
+        Respect à la table… sinon la porte. 🚪
+        </p>
+
+        <p class="highlight">
+        Un nom. <br>
+        Une posture. <br>
+        Un règne en construction. 👑✨
+        </p>
+
+    </div>
+
+    <!-- PLATEFORMES -->
+    <div class="platforms" id="platforms">
+        <a href="https://open.spotify.com/artist/0vCjlpmyGmvSm926KyzfXW?si=Ahd3SMHKQPW2bwptUL5d1w" target="_blank">
+            <i class="fab fa-spotify"></i>
+        </a>
+
+        <a href="https://music.apple.com/cm/artist/leroi/1816965619" target="_blank">
+            <i class="fab fa-apple"></i>
+        </a>
+
+        <a href="https://youtube.com/@leroi__404?si=jyJXR4FMdXrrJlGM" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@leroi0694?_r=1&_t=ZS-94JCIXBPhfm" target="_blank">
+            <i class="fab fa-tiktok"></i>
+        </a>
+    </div>
+
+</div>
+
+<script>
+window.addEventListener('load', () => {
+    const title = document.getElementById('main-title');
+    const desc = document.getElementById('desc');
+    const platforms = document.getElementById('platforms');
+
+    title.style.opacity = '1';
+    title.style.transform = 'translateY(0) rotateX(0deg)';
+
+    setTimeout(() => {
+        desc.classList.add('active');
+    }, 700);
+
+    setTimeout(() => {
+        platforms.classList.add('active');
+    }, 1200);
+});
+</script>
+
+</body>
+</html>
