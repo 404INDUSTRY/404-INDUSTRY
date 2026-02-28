@@ -17,8 +17,10 @@ body{
     background-repeat:no-repeat;
     color:white;
     text-align:center;
+    overflow:hidden;
 }
 
+/* CONTENU */
 .container{
     height:100vh;
     display:flex;
@@ -56,7 +58,24 @@ h1{
 .btn-univers:hover{
     background:white;
     color:black;
-    box-shadow:0 0 60px #00f2ff;
+}
+
+/* TRANSITION ECRAN NOIR */
+#transition{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:black;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity 1s ease;
+    z-index:9999;
+}
+
+#transition.active{
+    opacity:1;
 }
 </style>
 </head>
@@ -67,10 +86,25 @@ h1{
     <h1>404 INDUSTRY</h1>
     <p class="subtitle">VISION • DISCIPLINE • IMPACT</p>
 
-    <a href="univers404.html" class="btn-univers">
+    <a href="#" class="btn-univers" onclick="goToPage(event)">
         PLONGE DANS L'UNIVERS DU 404
     </a>
 </div>
+
+<div id="transition"></div>
+
+<script>
+function goToPage(e){
+    e.preventDefault();
+
+    const transition = document.getElementById("transition");
+    transition.classList.add("active");
+
+    setTimeout(function(){
+        window.location.href = "univers404.html";
+    },1000);
+}
+</script>
 
 </body>
 </html>
