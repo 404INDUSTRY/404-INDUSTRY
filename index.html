@@ -7,7 +7,7 @@
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="logo.png">
 
-<!-- Google Font style gang -->
+<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
 <style>
@@ -16,14 +16,14 @@ body{
     padding:0;
     font-family: 'Anton', Arial, sans-serif;
     color: white;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('logo.png');
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('logo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     text-align:center;
 }
 
-/* Container principal */
+/* Hero Section */
 .container{
     max-width: 1200px;
     margin: auto;
@@ -31,119 +31,109 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 70vh; /* occupe la majorité de la page */
+    height: 75vh;
 }
 
 /* Titre principal neon noir */
 h1 {
-    font-size: 70px;
+    font-size: 75px;
     color: #fff;
+    letter-spacing: 4px;
     text-shadow:
         0 0 5px #000,
         0 0 10px #000,
         0 0 20px #000,
-        0 0 30px #000,
-        0 0 40px #000,
-        0 0 55px #000,
-        0 0 75px #000;
-    letter-spacing: 3px;
+        0 0 40px #000;
 }
 
 /* Slogan */
-p.subtitle {
+.subtitle {
     font-size: 24px;
     color: #ccc;
-    text-shadow: 0 0 5px #000;
     margin-top: 10px;
+    text-shadow: 0 0 5px #000;
 }
 
-/* Bouton neon noir */
-.btn {
+/* BOUTON UNIVERS - NEON PUISSANT */
+.btn-univers {
     display:inline-block;
-    margin-top:40px;
-    padding:15px 50px;
-    color:white;
+    margin-top:50px;
+    padding:20px 70px;
+    font-size:30px;
+    color:#ffffff;
     background:transparent;
-    border:2px solid #000;
+    border:2px solid #ffffff;
     text-decoration:none;
     font-weight:bold;
-    border-radius:5px;
-    box-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000;
-    transition: 0.3s;
+    border-radius:10px;
+    letter-spacing:2px;
+    box-shadow:
+        0 0 15px #ffffff,
+        0 0 30px #ffffff,
+        0 0 60px #00f2ff,
+        0 0 90px #00f2ff;
+    transition: 0.3s ease-in-out;
 }
 
-.btn:hover {
-    background:#000;
-    color:white;
-    box-shadow: 0 0 20px #000, 0 0 40px #000, 0 0 60px #000;
+.btn-univers:hover {
+    background:#ffffff;
+    color:#000;
+    box-shadow:
+        0 0 30px #ffffff,
+        0 0 60px #00f2ff,
+        0 0 120px #00f2ff;
 }
 
-/* À propos */
+/* Sections */
 .section{
-    padding:50px 20px;
+    padding:60px 20px;
 }
 
 .section h2{
-    font-size:50px;
+    font-size:45px;
     color:white;
-    text-shadow:0 0 10px #000;
     margin-bottom:20px;
+    text-shadow:0 0 10px #000;
 }
 
 .section p{
     font-size:18px;
     color:#ccc;
-    text-shadow:0 0 5px #000;
     line-height:1.6;
+    text-shadow:0 0 5px #000;
 }
 
-/* Cadres du bas */
+/* Cadres */
 .cadres{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 0 20px;
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    max-width:1200px;
+    margin:50px auto;
+    padding:0 20px;
 }
 
 @media(min-width:768px){
     .cadres{
-        flex-direction: row;
+        flex-direction:row;
     }
 }
 
 .cadre{
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.7);
     border: 2px solid #000;
-    padding: 30px;
+    padding: 35px;
     border-radius: 15px;
     flex:1;
-    box-shadow: 0 0 20px #000, 0 0 40px #000;
-    text-align: center;
-}
-
-.cadre h2{
-    font-size: 40px;
-    color: #fff;
-    text-shadow: 0 0 10px #000;
-    margin-bottom: 15px;
-}
-
-.cadre p{
-    font-size: 18px;
-    color: #ccc;
-    text-shadow: 0 0 5px #000;
-    line-height: 1.6;
+    box-shadow: 0 0 20px #000, 0 0 50px #000;
 }
 
 /* Footer */
 .footer{
-    background: rgba(0,0,0,0.7);
-    padding:20px;
+    background: rgba(0,0,0,0.8);
+    padding:25px;
     font-size:14px;
     color:#aaa;
-    text-align:center;
 }
 </style>
 </head>
@@ -153,26 +143,41 @@ p.subtitle {
 <div class="container">
     <h1>404 INDUSTRY</h1>
     <p class="subtitle">VISION • DISCIPLINE • IMPACT</p>
-    <a href="univers404.html" class="btn">PLONGE DANS L'UNIVERS 404</a>
+    <a href="univers404.html" class="btn-univers">
+        PLONGE DANS L'UNIVERS DU 404
+    </a>
 </div>
 
-<!-- À propos -->
+<!-- Présentation -->
 <div class="section">
     <h2>À propos</h2>
-    <p>404 INDUSTRY est un label indépendant émergent dans la scène musicale ivoirienne, créé le 02/01/2025. Nous imposons notre style unique, brut et authentique, pour marquer la scène locale et internationale.</p>
+    <p>
+        404 INDUSTRY est un label indépendant émergent dans la scène musicale ivoirienne,
+        créé le 02/01/2025. Nous imposons notre style unique, brut et authentique,
+        pour marquer la scène locale et internationale.
+    </p>
 </div>
 
-<!-- Cadres du bas -->
-<div class="section cadres">
+<!-- Cadres -->
+<div class="cadres">
+
     <div class="cadre">
         <h2>404 INDUSTRY</h2>
-        <p>404 INDUSTRY est un label indépendant émergent dans la scène musicale ivoirienne, créé le 02/01/2025. Nous imposons notre style unique, brut et authentique, pour marquer la scène locale et internationale.</p>
+        <p>
+            Un mouvement musical né pour déranger les codes et imposer une nouvelle
+            énergie sur la scène ivoirienne. Discipline, stratégie et puissance.
+        </p>
     </div>
 
     <div class="cadre">
         <h2>Notre But</h2>
-        <p>Notre but est de s’imposer brutalement avec une identité violente et inspirer la nouvelle génération à travers notre musique et notre vision sans compromis.</p>
+        <p>
+            Notre but est de s’imposer brutalement avec une identité violente
+            et inspirer la nouvelle génération à travers notre musique et
+            notre vision sans compromis.
+        </p>
     </div>
+
 </div>
 
 <!-- Footer -->
