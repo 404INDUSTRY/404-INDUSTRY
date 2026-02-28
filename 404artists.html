@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>404 ARTISTS</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+<style>
+body{
+    margin:0;
+    padding:60px 20px;
+    font-family:'Montserrat', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.95)), url('logo.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+    overflow-x:hidden;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+}
+
+/* TITRE AVEC ANIMATION */
+#main-title{
+    font-size:64px;
+    margin-top:100px;
+    color:#ff00ff;
+    opacity:0;
+    transform:translateY(-100px) rotateX(45deg);
+    transition: all 1.5s ease;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+}
+
+/* BOUTON RETOUR */
+.btn-retour{
+    position:fixed;
+    top:25px;
+    left:25px;
+    padding:12px 28px;
+    border:2px solid white;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    font-size:14px;
+    letter-spacing:2px;
+    transition:0.3s;
+    box-shadow:0 0 15px #ff00ff;
+}
+.btn-retour:hover{
+    background:white;
+    color:black;
+    box-shadow:0 0 30px #ff00ff;
+}
+
+/* GRILLE DES CADRES HORIZONTALE */
+.grid{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:50px;
+    margin-top:80px;
+}
+
+.card{
+    width:400px;
+    height:120px;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+    letter-spacing:1px;
+    transition: all 0.4s;
+    box-shadow:0 0 15px #00ffff;
+}
+
+.card1{ background:#ff4d4d; border:2px solid #ff4d4d; box-shadow:0 0 20px #ff4d4d; }
+.card2{ background:#4dff88; border:2px solid #4dff88; box-shadow:0 0 20px #4dff88; }
+.card3{ background:#4d79ff; border:2px solid #4d79ff; box-shadow:0 0 20px #4d79ff; }
+
+.card:hover{
+    transform:scale(1.05);
+    filter:brightness(1.2);
+}
+
+/* ANIMATION APPARITION */
+.reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 1s ease;
+}
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<a href="404industry.html" class="btn-retour">← RETOUR</a>
+
+<div class="container">
+    <!-- TITRE PRINCIPAL -->
+    <h1 id="main-title">404 ARTISTS</h1>
+
+    <div class="reveal">
+        <p>Découvrez les artistes qui font vibrer 404 INDUSTRY, chacun avec son univers unique et sa signature musicale.</p>
+    </div>
+
+    <div class="grid reveal">
+        <a href="#" class="card card1">LEROI</a>
+        <a href="#" class="card card2">ÖNYX</a>
+        <a href="#" class="card card3">Sa D Bo</a>
+    </div>
+</div>
+
+<script>
+// Animation titre à l’arrivée
+window.addEventListener('load', () => {
+    const title = document.getElementById('main-title');
+    title.style.opacity = '1';
+    title.style.transform = 'translateY(0) rotateX(0deg)';
+});
+
+// Animation progressive du texte et des cadres
+function revealOnScroll(){
+    const reveals=document.querySelectorAll('.reveal');
+    reveals.forEach(el=>{
+        const windowHeight=window.innerHeight;
+        const elementTop=el.getBoundingClientRect().top;
+        if(elementTop < windowHeight - 100){
+            el.classList.add('active');
+        }
+    });
+}
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+</script>
+
+</body>
+</html>
