@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>YOUNG GENIUS – 404 INDUSTRY</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    padding:60px 20px;
+    font-family:'Montserrat', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.95)), url('logo.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+/* TITRE ANIMÉ */
+#main-title{
+    font-size:60px;
+    margin-top:100px;
+    color:#00f2ff;
+    opacity:0;
+    transform:translateY(-100px) rotateX(45deg);
+    transition:1.5s ease;
+    text-shadow:0 0 10px #00f2ff, 0 0 25px #00f2ff, 0 0 40px #00f2ff;
+}
+
+/* BOUTON RETOUR */
+.btn-retour{
+    position:fixed;
+    top:25px;
+    left:25px;
+    padding:12px 28px;
+    border:2px solid white;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    font-size:14px;
+    letter-spacing:2px;
+    transition:0.3s;
+}
+.btn-retour:hover{
+    background:white;
+    color:black;
+}
+
+/* DESCRIPTION */
+.description{
+    max-width:750px;
+    margin:60px auto;
+    line-height:1.9;
+    font-weight:300;
+    color:#ddd;
+    opacity:0;
+    transform:translateY(40px);
+    transition:1.2s ease;
+}
+
+.description.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* HIGHLIGHT STYLE */
+.highlight{
+    color:#00f2ff;
+    font-weight:600;
+}
+</style>
+</head>
+
+<body>
+
+<a href="404familly.html" class="btn-retour">← RETOUR</a>
+
+<div class="container">
+
+    <h1 id="main-title">🎹 YOUNG GENIUS</h1>
+
+    <div class="description" id="desc">
+
+        <h2 class="highlight">Beatmaker officiel du label 404 INDUSTRY</h2>
+
+        <p>
+        Dans l’ombre des micros mais au cœur du son, Young Genius façonne l’identité musicale de 404 Industry.
+        Architecte des vibes, sculpteur de mélodies, il transforme chaque émotion en instrumentale puissante et immersive.
+        </p>
+
+        <p>
+        🔥 <span class="highlight">Style :</span> mélodies profondes, drums percutants, ambiances modernes<br>
+        🎧 <span class="highlight">Signature :</span> une fusion entre sensibilité et énergie brute<br>
+        🚀 <span class="highlight">Rôle :</span> donner une âme sonore aux artistes du label
+        </p>
+
+        <p>
+        Young Genius, ce n’est pas juste un beatmaker…<br>
+        <strong>C’est la fondation du son 404. 🎼✨</strong>
+        </p>
+
+    </div>
+
+</div>
+
+<script>
+window.addEventListener('load', () => {
+    const title = document.getElementById('main-title');
+    const desc = document.getElementById('desc');
+
+    title.style.opacity = '1';
+    title.style.transform = 'translateY(0) rotateX(0deg)';
+
+    setTimeout(() => {
+        desc.classList.add('active');
+    }, 600);
+});
+</script>
+
+</body>
+</html>
