@@ -55,44 +55,13 @@ body{
 }
 
 /* TEXTE */
-p, li{
+p{
     line-height:1.8;
     color:#ddd;
     font-weight:300;
     max-width:800px;
     margin:auto;
     margin-top:20px;
-}
-
-/* GRILLE DES CADRES (optionnel, horizontal) */
-.grid{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:50px;
-    margin-top:50px;
-}
-
-.card{
-    width:400px;
-    height:120px;
-    border-radius:15px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-decoration:none;
-    color:white;
-    font-size:24px;
-    font-weight:bold;
-    letter-spacing:1px;
-    transition: all 0.4s;
-    background: rgba(0,0,0,0.7);
-    border:2px solid #ff6600;
-    box-shadow:0 0 15px #ff6600;
-}
-.card:hover{
-    transform:scale(1.05);
-    filter:brightness(1.2);
 }
 
 /* ANIMATION APPARITION */
@@ -113,7 +82,7 @@ p, li{
 <a href="404industry.html" class="btn-retour">← RETOUR</a>
 
 <div class="container">
-    <!-- TITRE PRINCIPAL -->
+
     <h1 id="main-title">🔥 404 SQUAD</h1>
 
     <div class="reveal">
@@ -136,23 +105,15 @@ p, li{
         <p>⚡ 404 — On ne trouve pas l’erreur. On crée l’impact.</p>
     </div>
 
-    <!-- GRILLE DES CADRES (optionnel pour membres ou futur contenu) -->
-    <div class="grid reveal">
-        <!-- Exemples de cadres, tu peux ajouter plus tard si nécessaire -->
-        <a href="#" class="card">Membre 1</a>
-        <a href="#" class="card">Membre 2</a>
-    </div>
 </div>
 
 <script>
-// Animation titre à l’arrivée
 window.addEventListener('load', () => {
     const title = document.getElementById('main-title');
     title.style.opacity = '1';
     title.style.transform = 'translateY(0) rotateX(0deg)';
 });
 
-// Animation progressive du texte et des cadres
 function revealOnScroll(){
     const reveals=document.querySelectorAll('.reveal');
     reveals.forEach(el=>{
