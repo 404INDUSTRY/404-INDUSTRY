@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>N PRODUCTION – 404 INDUSTRY</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    padding:60px 20px;
+    font-family:'Montserrat', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.95)), url('logo.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+    overflow-x:hidden;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
+}
+
+#main-title{
+    font-size:60px;
+    margin-top:100px;
+    color:#00f2ff;
+    opacity:0;
+    transform:translateY(-100px);
+    transition:1.5s ease;
+    text-shadow:0 0 15px #00f2ff,0 0 35px #00f2ff;
+}
+
+.intro{
+    margin-top:50px;
+    font-size:18px;
+    line-height:1.8;
+    max-width:800px;
+    margin-left:auto;
+    margin-right:auto;
+    opacity:0;
+    transform:translateY(40px);
+    transition:1.2s ease;
+}
+
+.artists-grid{
+    margin-top:80px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    opacity:0;
+    transform:translateY(40px);
+    transition:1.2s ease;
+}
+
+.artist-card{
+    padding:25px 35px;
+    border:2px solid white;
+    border-radius:15px;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.artist-card:hover{
+    background:#00f2ff;
+    color:black;
+    transform:scale(1.08);
+    box-shadow:0 0 20px #00f2ff;
+}
+
+.btn-retour{
+    position:fixed;
+    top:25px;
+    left:25px;
+    padding:12px 28px;
+    border:2px solid white;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.btn-retour:hover{
+    background:white;
+    color:black;
+}
+</style>
+</head>
+
+<body>
+
+<a href="404industry.html" class="btn-retour">← RETOUR</a>
+
+<div class="container">
+
+    <h1 id="main-title">N PRODUCTION</h1>
+
+    <div class="intro" id="intro">
+        <p>
+        N PRODUCTION regroupe les artistes accompagnés et développés par Messene en dehors du noyau officiel 404 Industry.
+        </p>
+
+        <p>
+        Une extension stratégique. Une vision élargie.  
+        Des talents sélectionnés pour leur potentiel, leur authenticité et leur capacité à marquer leur génération.
+        </p>
+
+        <p>
+        Ici, la direction artistique reste la même : discipline, impact et montée en puissance.
+        </p>
+    </div>
+
+    <div class="artists-grid" id="grid">
+        <a href="ogglock.html" class="artist-card">OG GLOCK</a>
+        <a href="hassanescobar.html" class="artist-card">HASSAN ESCOBAR (H.E)</a>
+        <a href="klmz.html" class="artist-card">KLMZ</a>
+        <a href="mhapiwest.html" class="artist-card">MHA THE PIWEST</a>
+        <a href="bmaxlashoot.html" class="artist-card">BMAX LA SHOOT</a>
+        <a href="espritz.html" class="artist-card">ESPRIT Z</a>
+    </div>
+
+</div>
+
+<script>
+window.addEventListener('load', () => {
+    document.getElementById('main-title').style.opacity = '1';
+    document.getElementById('main-title').style.transform = 'translateY(0)';
+
+    setTimeout(()=>{
+        document.getElementById('intro').style.opacity = '1';
+        document.getElementById('intro').style.transform = 'translateY(0)';
+    },600);
+
+    setTimeout(()=>{
+        document.getElementById('grid').style.opacity = '1';
+        document.getElementById('grid').style.transform = 'translateY(0)';
+    },1100);
+});
+</script>
+
+</body>
+</html>
