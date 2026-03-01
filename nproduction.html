@@ -19,116 +19,127 @@ body{
 }
 
 .container{
-    max-width:900px;
+    max-width:1000px;
     margin:auto;
     text-align:center;
 }
 
 #main-title{
-    font-size:60px;
-    margin-top:100px;
+    font-size:65px;
+    margin-top:120px;
     color:#00f2ff;
     opacity:0;
-    transform:translateY(-100px);
+    transform:translateY(-120px);
     transition:1.5s ease;
-    text-shadow:0 0 15px #00f2ff,0 0 35px #00f2ff;
+    text-shadow:0 0 20px #00f2ff,0 0 40px #00f2ff;
 }
 
 .intro{
     margin-top:50px;
     font-size:18px;
-    line-height:1.9;
+    line-height:2;
     opacity:0;
-    transform:translateY(40px);
+    transform:translateY(50px);
     transition:1.2s ease;
 }
 
-.artists-list{
-    margin-top:80px;
+.grid{
+    margin-top:90px;
     display:flex;
     flex-direction:column;
-    gap:35px;
+    gap:40px;
     opacity:0;
-    transform:translateY(40px);
+    transform:translateY(50px);
     transition:1.2s ease;
 }
 
-.artist-card{
-    padding:25px;
-    border:2px solid;
-    border-radius:15px;
+.card{
+    padding:45px;
+    font-size:26px;
+    font-weight:700;
+    border:3px solid;
+    border-radius:20px;
     text-decoration:none;
-    font-weight:600;
-    font-size:20px;
     transition:0.3s;
 }
 
-/* Couleurs individuelles */
+/* Couleurs Néon individuelles */
 
 .ogglock{
     color:#ff0000;
     border-color:#ff0000;
-    text-shadow:0 0 10px #ff0000;
+    text-shadow:0 0 15px #ff0000;
 }
 .ogglock:hover{
     background:#ff0000;
     color:black;
-    box-shadow:0 0 25px #ff0000;
-}
-
-.hassan{
-    color:#ff8800;
-    border-color:#ff8800;
-    text-shadow:0 0 10px #ff8800;
-}
-.hassan:hover{
-    background:#ff8800;
-    color:black;
-    box-shadow:0 0 25px #ff8800;
+    box-shadow:0 0 35px #ff0000;
 }
 
 .klmz{
     color:#00ffcc;
     border-color:#00ffcc;
-    text-shadow:0 0 10px #00ffcc;
+    text-shadow:0 0 15px #00ffcc;
 }
 .klmz:hover{
     background:#00ffcc;
     color:black;
-    box-shadow:0 0 25px #00ffcc;
-}
-
-.mha{
-    color:#ff00ff;
-    border-color:#ff00ff;
-    text-shadow:0 0 10px #ff00ff;
-}
-.mha:hover{
-    background:#ff00ff;
-    color:black;
-    box-shadow:0 0 25px #ff00ff;
+    box-shadow:0 0 35px #00ffcc;
 }
 
 .bmax{
     color:#00ff00;
     border-color:#00ff00;
-    text-shadow:0 0 10px #00ff00;
+    text-shadow:0 0 15px #00ff00;
 }
 .bmax:hover{
     background:#00ff00;
     color:black;
-    box-shadow:0 0 25px #00ff00;
+    box-shadow:0 0 35px #00ff00;
+}
+
+.mha{
+    color:#ff00ff;
+    border-color:#ff00ff;
+    text-shadow:0 0 15px #ff00ff;
+}
+.mha:hover{
+    background:#ff00ff;
+    color:black;
+    box-shadow:0 0 35px #ff00ff;
+}
+
+.hassan{
+    color:#ff8800;
+    border-color:#ff8800;
+    text-shadow:0 0 15px #ff8800;
+}
+.hassan:hover{
+    background:#ff8800;
+    color:black;
+    box-shadow:0 0 35px #ff8800;
+}
+
+.piw{
+    color:#0099ff;
+    border-color:#0099ff;
+    text-shadow:0 0 15px #0099ff;
+}
+.piw:hover{
+    background:#0099ff;
+    color:black;
+    box-shadow:0 0 35px #0099ff;
 }
 
 .esprit{
-    color:#0099ff;
-    border-color:#0099ff;
-    text-shadow:0 0 10px #0099ff;
+    color:#ffffff;
+    border-color:#ffffff;
+    text-shadow:0 0 15px #ffffff;
 }
 .esprit:hover{
-    background:#0099ff;
+    background:#ffffff;
     color:black;
-    box-shadow:0 0 25px #0099ff;
+    box-shadow:0 0 35px #ffffff;
 }
 
 .btn-retour{
@@ -160,31 +171,29 @@ body{
 
     <div class="intro" id="intro">
         <p>
-        N PRODUCTION regroupe les artistes accompagnés et développés par Messene en dehors du noyau officiel 404 Industry.
+        N PRODUCTION regroupe les artistes accompagnés par Messene en dehors du noyau officiel 404 Industry.
         </p>
-
         <p>
-        Une sélection stratégique de talents extérieurs au collectif principal, choisis pour leur potentiel, leur identité et leur capacité à évoluer vers un niveau supérieur.
-        </p>
-
-        <p>
-        Ici, la vision reste la même : discipline, impact, progression.
+        Des talents sélectionnés hors du collectif principal,
+        développés avec la même exigence, la même vision et la même ambition.
         </p>
     </div>
 
-    <div class="artists-list" id="list">
+    <div class="grid" id="grid">
 
-        <a href="ogglock.html" class="artist-card ogglock">OG GLOCK</a>
+        <a href="ogglock.html" class="card ogglock">OG GLOCK</a>
 
-        <a href="hassanescobar.html" class="artist-card hassan">HASSAN ESCOBAR (H.E)</a>
+        <a href="klmz.html" class="card klmz">KLMZ</a>
 
-        <a href="klmz.html" class="artist-card klmz">KLMZ</a>
+        <a href="bmaxlashoot.html" class="card bmax">BMAX LA SHOOT</a>
 
-        <a href="mhapiwest.html" class="artist-card mha">MHA THE PIWEST</a>
+        <a href="mha.html" class="card mha">MHA</a>
 
-        <a href="bmaxlashoot.html" class="artist-card bmax">BMAX LA SHOOT</a>
+        <a href="hassanescobar.html" class="card hassan">HASSAN ESCOBAR (H.E)</a>
 
-        <a href="espritz.html" class="artist-card esprit">ESPRIT Z</a>
+        <a href="thepiwest.html" class="card piw">THE PIWEST</a>
+
+        <a href="espritz.html" class="card esprit">ESPRIT Z</a>
 
     </div>
 
@@ -192,6 +201,7 @@ body{
 
 <script>
 window.addEventListener('load', () => {
+
     document.getElementById('main-title').style.opacity = '1';
     document.getElementById('main-title').style.transform = 'translateY(0)';
 
@@ -201,8 +211,8 @@ window.addEventListener('load', () => {
     },600);
 
     setTimeout(()=>{
-        document.getElementById('list').style.opacity = '1';
-        document.getElementById('list').style.transform = 'translateY(0)';
+        document.getElementById('grid').style.opacity = '1';
+        document.getElementById('grid').style.transform = 'translateY(0)';
     },1100);
 });
 </script>
