@@ -1,156 +1,110 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 INDUSTRY</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #000;
-      font-family: 'Arial', sans-serif;
-      color: #fff;
-      background: url('logo_fond.png') center center no-repeat;
-      background-size: 50%;
-      overflow-x: hidden;
-    }
+<meta charset="UTF-8">
+<title>404 INDUSTRY</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
-    .overlay {
-      background-color: rgba(0,0,0,0.85);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      padding: 50px 20px;
-    }
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family:'Anton', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('logo.png');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    color:white;
+    text-align:center;
+    overflow:hidden;
+}
 
-    h1 {
-      font-size: 5em;
-      color: #fff;
-      text-shadow: 0 0 10px #fff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
-      text-align: center;
-      margin: 0;
-    }
+/* CONTENU */
+.container{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
 
-    .main-button {
-      margin: 50px 0;
-      padding: 20px 50px;
-      font-size: 2em;
-      color: #00ffff;
-      background-color: transparent;
-      border: 3px solid #00ffff;
-      border-radius: 12px;
-      text-decoration: none;
-      text-align: center;
-      text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
-      transition: 0.3s;
-    }
+h1{
+    font-size:85px;
+    letter-spacing:5px;
+    text-shadow:0 0 40px #000;
+}
 
-    .main-button:hover {
-      background-color: #00ffff;
-      color: #000;
-      text-shadow: none;
-    }
+.subtitle{
+    font-size:22px;
+    color:#ccc;
+    margin-top:15px;
+    letter-spacing:3px;
+}
 
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin-bottom: 50px;
-    }
+.btn-univers{
+    margin-top:70px;
+    padding:22px 75px;
+    font-size:28px;
+    color:#fff;
+    border:2px solid #fff;
+    border-radius:12px;
+    text-decoration:none;
+    letter-spacing:3px;
+    box-shadow:0 0 35px #00f2ff;
+    transition:0.3s;
+}
 
-    .card {
-      background-color: rgba(17,17,17,0.95);
-      border: 2px solid #00ffff;
-      border-radius: 15px;
-      padding: 25px;
-      width: 320px;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+.btn-univers:hover{
+    background:white;
+    color:black;
+}
 
-    .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px #00ffff;
-    }
+/* TRANSITION ECRAN NOIR */
+#transition{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:black;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity 1s ease;
+    z-index:9999;
+}
 
-    .card h2 {
-      font-size: 1.7em;
-      margin-bottom: 15px;
-      text-shadow: 0 0 5px #00ffff;
-    }
-
-    .card p {
-      font-size: 1em;
-      line-height: 1.5em;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 0;
-    }
-
-    .footer-logos a {
-      margin: 0 15px;
-      display: inline-block;
-      transition: transform 0.3s;
-    }
-
-    .footer-logos a:hover {
-      transform: scale(1.2);
-    }
-
-    .footer-logos img {
-      width: 45px;
-      height: 45px;
-    }
-
-    .footer-email {
-      margin-bottom: 15px;
-      font-size: 1.1em;
-      color: #fff;
-    }
-  </style>
+#transition.active{
+    opacity:1;
+}
+</style>
 </head>
+
 <body>
 
-  <div class="overlay">
-
-    <!-- Titre -->
+<div class="container">
     <h1>404 INDUSTRY</h1>
+    <p class="subtitle">VISION • DISCIPLINE • IMPACT</p>
 
-    <!-- Bouton -->
-    <a href="univers404.html" class="main-button">Plonge dans l'univers 404</a>
+    <a href="#" class="btn-univers" onclick="goToPage(event)">
+        PLONGE DANS L'UNIVERS DU 404
+    </a>
+</div>
 
-    <!-- Cadres -->
-    <div class="cards">
-      <div class="card">
-        <h2>À propos</h2>
-        <p>404 INDUSTRY est un label indépendant émergent dans la scène musicale ivoirienne, créé le 02/01/2025. Une structure qui combine vision, énergie street et puissance mélodique pour imposer des artistes et inspirer la nouvelle génération.</p>
-      </div>
-      <div class="card">
-        <h2>Notre but</h2>
-        <p>Notre objectif : s’imposer brutalement avec une identité forte et violente, inspirer la nouvelle génération et construire une marque respectée et influente sur la scène internationale.</p>
-      </div>
-    </div>
+<div id="transition"></div>
 
-    <!-- Footer -->
-    <footer>
-      <div class="footer-email">
-        Nous contacter : <a href="mailto:404industryy@gmail.com" style="color:#00ffff;">404industryy@gmail.com</a>
-      </div>
-      <div class="footer-logos">
-        <a href="https://whatsapp.com/channel/0029Vb620ywBFLgdVRgIyX1a" target="_blank"><img src="logo_whatsapp.png" alt="WhatsApp"></a>
-        <a href="https://www.instagram.com/404__industry?igsh=NWVidDdvbDU2aXZm" target="_blank"><img src="logo_instagram.png" alt="Instagram"></a>
-        <a href="https://www.tiktok.com/@404.industry" target="_blank"><img src="logo_tiktok.png" alt="TikTok"></a>
-        <a href="https://x.com/404_INDUSTRY" target="_blank"><img src="logo_x.png" alt="X"></a>
-      </div>
-    </footer>
+<script>
+function goToPage(e){
+    e.preventDefault();
 
-  </div>
+    const transition = document.getElementById("transition");
+    transition.classList.add("active");
+
+    setTimeout(function(){
+        window.location.href = "univers404.html";
+    },1000);
+}
+</script>
 
 </body>
 </html>
