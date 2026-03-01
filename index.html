@@ -5,45 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 INDUSTRY</title>
   <style>
-    /* Style général */
     body {
       margin: 0;
       padding: 0;
       background-color: #000;
       font-family: 'Arial', sans-serif;
       color: #fff;
+      background: url('logo_fond.png') center center no-repeat;
+      background-size: 50%;
       overflow-x: hidden;
     }
 
-    /* Logo et titre */
-    .header {
-      text-align: center;
-      padding: 50px 20px 20px 20px;
-      position: relative;
+    .overlay {
+      background-color: rgba(0,0,0,0.85);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px 20px;
     }
 
-    .header h1 {
-      font-size: 4em;
+    h1 {
+      font-size: 5em;
       color: #fff;
       text-shadow: 0 0 10px #fff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
+      text-align: center;
       margin: 0;
     }
 
-    /* Bouton principal */
     .main-button {
-      display: block;
-      margin: 40px auto;
-      padding: 20px 40px;
-      font-size: 1.8em;
+      margin: 50px 0;
+      padding: 20px 50px;
+      font-size: 2em;
       color: #00ffff;
       background-color: transparent;
-      border: 2px solid #00ffff;
-      border-radius: 10px;
-      cursor: pointer;
+      border: 3px solid #00ffff;
+      border-radius: 12px;
       text-decoration: none;
-      transition: 0.3s;
       text-align: center;
       text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+      transition: 0.3s;
     }
 
     .main-button:hover {
@@ -52,22 +54,20 @@
       text-shadow: none;
     }
 
-    /* Cadres à propos / but */
     .cards {
       display: flex;
-      flex-direction: row;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
-      flex-wrap: wrap;
-      margin: 50px 20px;
+      margin-bottom: 50px;
     }
 
     .card {
-      background-color: #111;
+      background-color: rgba(17,17,17,0.95);
       border: 2px solid #00ffff;
       border-radius: 15px;
-      padding: 30px;
-      width: 300px;
+      padding: 25px;
+      width: 320px;
       text-align: center;
       transition: transform 0.3s, box-shadow 0.3s;
     }
@@ -78,7 +78,7 @@
     }
 
     .card h2 {
-      font-size: 1.5em;
+      font-size: 1.7em;
       margin-bottom: 15px;
       text-shadow: 0 0 5px #00ffff;
     }
@@ -88,16 +88,13 @@
       line-height: 1.5em;
     }
 
-    /* Footer avec logos */
     footer {
-      background-color: #111;
       text-align: center;
-      padding: 30px 20px;
-      margin-top: 50px;
+      padding: 30px 0;
     }
 
     .footer-logos a {
-      margin: 0 10px;
+      margin: 0 15px;
       display: inline-block;
       transition: transform 0.3s;
     }
@@ -107,51 +104,53 @@
     }
 
     .footer-logos img {
-      width: 40px;
-      height: 40px;
+      width: 45px;
+      height: 45px;
     }
 
     .footer-email {
-      margin-bottom: 20px;
-      font-size: 1em;
+      margin-bottom: 15px;
+      font-size: 1.1em;
       color: #fff;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header / Logo -->
-  <div class="header">
+  <div class="overlay">
+
+    <!-- Titre -->
     <h1>404 INDUSTRY</h1>
+
+    <!-- Bouton -->
+    <a href="univers404.html" class="main-button">Plonge dans l'univers 404</a>
+
+    <!-- Cadres -->
+    <div class="cards">
+      <div class="card">
+        <h2>À propos</h2>
+        <p>404 INDUSTRY est un label indépendant émergent dans la scène musicale ivoirienne, créé le 02/01/2025. Une structure qui combine vision, énergie street et puissance mélodique pour imposer des artistes et inspirer la nouvelle génération.</p>
+      </div>
+      <div class="card">
+        <h2>Notre but</h2>
+        <p>Notre objectif : s’imposer brutalement avec une identité forte et violente, inspirer la nouvelle génération et construire une marque respectée et influente sur la scène internationale.</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-email">
+        Nous contacter : <a href="mailto:404industryy@gmail.com" style="color:#00ffff;">404industryy@gmail.com</a>
+      </div>
+      <div class="footer-logos">
+        <a href="https://whatsapp.com/channel/0029Vb620ywBFLgdVRgIyX1a" target="_blank"><img src="logo_whatsapp.png" alt="WhatsApp"></a>
+        <a href="https://www.instagram.com/404__industry?igsh=NWVidDdvbDU2aXZm" target="_blank"><img src="logo_instagram.png" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@404.industry" target="_blank"><img src="logo_tiktok.png" alt="TikTok"></a>
+        <a href="https://x.com/404_INDUSTRY" target="_blank"><img src="logo_x.png" alt="X"></a>
+      </div>
+    </footer>
+
   </div>
-
-  <!-- Bouton Plonge dans l'univers 404 -->
-  <a href="univers404.html" class="main-button">Plonge dans l'univers 404</a>
-
-  <!-- Cadres à propos / notre but -->
-  <div class="cards">
-    <div class="card">
-      <h2>À propos</h2>
-      <p>404 INDUSTRY est un label indépendant émergent dans la scène musicale ivoirienne, créé le 02/01/2025. Une structure qui combine vision, énergie street et puissance mélodique pour imposer des artistes et inspirer la nouvelle génération.</p>
-    </div>
-    <div class="card">
-      <h2>Notre but</h2>
-      <p>Notre objectif : s’imposer brutalement avec une identité forte et violente, inspirer la nouvelle génération et construire une marque respectée et influente sur la scène internationale.</p>
-    </div>
-  </div>
-
-  <!-- Footer avec email et logos -->
-  <footer>
-    <div class="footer-email">
-      Nous contacter : <a href="mailto:404industryy@gmail.com" style="color:#00ffff;">404industryy@gmail.com</a>
-    </div>
-    <div class="footer-logos">
-      <a href="https://whatsapp.com/channel/0029Vb620ywBFLgdVRgIyX1a" target="_blank"><img src="logo_whatsapp.png" alt="WhatsApp"></a>
-      <a href="https://www.instagram.com/404__industry?igsh=NWVidDdvbDU2aXZm" target="_blank"><img src="logo_instagram.png" alt="Instagram"></a>
-      <a href="https://www.tiktok.com/@404.industry" target="_blank"><img src="logo_tiktok.png" alt="TikTok"></a>
-      <a href="https://x.com/404_INDUSTRY" target="_blank"><img src="logo_x.png" alt="X"></a>
-    </div>
-  </footer>
 
 </body>
 </html>
