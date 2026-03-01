@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>BMAX LA SHOOT – 404 INDUSTRY</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    padding:60px 20px;
+    font-family:'Montserrat', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.96), rgba(0,0,0,0.96)), url('logo.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+    overflow-x:hidden;
+}
+
+.container{
+    max-width:950px;
+    margin:auto;
+    text-align:center;
+}
+
+#main-title{
+    font-size:60px;
+    margin-top:120px;
+    color:#ff7a00;
+    opacity:0;
+    transform:translateY(-120px);
+    transition:1.5s ease;
+    text-shadow:0 0 20px #ff7a00,0 0 45px #ff3c00;
+}
+
+.subtitle{
+    margin-top:15px;
+    font-style:italic;
+    opacity:0;
+    transition:1.5s ease;
+}
+
+.description{
+    margin-top:70px;
+    line-height:2.1;
+    font-size:18px;
+    opacity:0;
+    transform:translateY(50px);
+    transition:1.2s ease;
+}
+
+.highlight{
+    margin-top:35px;
+    font-weight:700;
+    font-size:20px;
+    color:#ff7a00;
+    text-shadow:0 0 15px #ff7a00;
+}
+
+.platforms{
+    margin-top:70px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:35px;
+    font-size:30px;
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s ease;
+}
+
+.platforms a{
+    color:white;
+    transition:0.3s;
+}
+
+.platforms a:hover{
+    color:#ff7a00;
+    transform:scale(1.2);
+    text-shadow:0 0 18px #ff7a00;
+}
+
+.btn-retour{
+    position:fixed;
+    top:25px;
+    left:25px;
+    padding:12px 28px;
+    border:2px solid white;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.btn-retour:hover{
+    background:white;
+    color:black;
+}
+</style>
+</head>
+
+<body>
+
+<a href="nproduction.html" class="btn-retour">← RETOUR</a>
+
+<div class="container">
+
+    <h1 id="main-title">🎤 BMAX LA SHOOT</h1>
+    <div class="subtitle" id="subtitle">Drill Ivoirienne • Mentalité • Puissance</div>
+
+    <div class="description" id="desc">
+
+        <p>
+        Originaire d’Agboville, en Côte d’Ivoire, Bmax La Shoot est une figure montante de la drill ivoirienne.
+        Porté par une énergie brute et une détermination sans faille,
+        il impose un style percutant, reconnaissable dès les premières mesures.
+        </p>
+
+        <p>
+        Issu d’un environnement où la persévérance n’est pas un choix mais une obligation,
+        il transforme ses réalités en musique.
+        Ses textes sont authentiques, directs, ancrés dans la rue et dans les défis quotidiens.
+        Chez lui, chaque mot a du poids, chaque phase a une intention.
+        </p>
+
+        <p>
+        Inspiré par la nouvelle vague de la drill internationale et africaine,
+        Bmax La Shoot développe une identité sonore sombre et puissante :
+        flows agressifs, punchlines tranchantes, instrumentales lourdes.
+        Il ne suit pas la tendance — il construit la sienne.
+        </p>
+
+        <p>
+        Fier représentant d’Agboville, il avance avec une vision claire :
+        mettre sa ville sur la carte et faire résonner son nom bien au-delà des frontières.
+        Son ambition dépasse la musique : c’est un mouvement, une mentalité.
+        </p>
+
+        <p class="highlight">
+        🔥 « La shoot, c’est pas juste un nom… c’est une mentalité. » — BLS
+        </p>
+
+    </div>
+
+    <!-- Plateformes -->
+    <div class="platforms" id="platforms">
+
+        <a href="https://open.spotify.com/artist/32pH4Sk6ktwwQZJtjuf2TN?si=d8OZv3BSTAeelAH_UjsYIw" target="_blank">
+            <i class="fab fa-spotify"></i>
+        </a>
+
+        <a href="https://music.apple.com/us/artist/bmax-la-shoot/1762490043" target="_blank">
+            <i class="fab fa-apple"></i>
+        </a>
+
+        <a href="https://youtube.com/@bmax_officiel?si=FgxFU8bEInmNotgP" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+        <a href="https://x.com/Bmax_lashoot" target="_blank">
+            <i class="fab fa-x-twitter"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@bmaxlashoot?_r=1&_t=ZS-94K5KiznB2N" target="_blank">
+            <i class="fab fa-tiktok"></i>
+        </a>
+
+        <a href="https://www.instagram.com/bmax_lashoot?igsh=MWw5aHA4NmViZXEzdQ==" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+window.addEventListener('load', () => {
+
+    const title = document.getElementById('main-title');
+    const subtitle = document.getElementById('subtitle');
+    const desc = document.getElementById('desc');
+    const platforms = document.getElementById('platforms');
+
+    title.style.opacity = '1';
+    title.style.transform = 'translateY(0)';
+    subtitle.style.opacity = '1';
+
+    setTimeout(()=>{
+        desc.style.opacity = '1';
+        desc.style.transform = 'translateY(0)';
+    },700);
+
+    setTimeout(()=>{
+        platforms.style.opacity = '1';
+        platforms.style.transform = 'translateY(0)';
+    },1400);
+});
+</script>
+
+</body>
+</html>
