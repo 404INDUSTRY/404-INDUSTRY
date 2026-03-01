@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>OG GLOCK – 404 INDUSTRY</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    padding:60px 20px;
+    font-family:'Montserrat', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.96), rgba(0,0,0,0.96)), url('logo.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+    overflow-x:hidden;
+}
+
+.container{
+    max-width:950px;
+    margin:auto;
+    text-align:center;
+}
+
+#main-title{
+    font-size:60px;
+    margin-top:120px;
+    color:#ff0000;
+    opacity:0;
+    transform:translateY(-120px);
+    transition:1.5s ease;
+    text-shadow:0 0 20px #ff0000,0 0 45px #990000;
+}
+
+.subtitle{
+    margin-top:15px;
+    font-style:italic;
+    opacity:0;
+    transition:1.5s ease;
+}
+
+.description{
+    margin-top:70px;
+    line-height:2.1;
+    font-size:18px;
+    opacity:0;
+    transform:translateY(50px);
+    transition:1.2s ease;
+}
+
+.highlight{
+    margin-top:30px;
+    font-weight:600;
+    color:#ff0000;
+    text-shadow:0 0 12px #ff0000;
+}
+
+.platforms{
+    margin-top:70px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:35px;
+    font-size:30px;
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s ease;
+}
+
+.platforms a{
+    color:white;
+    transition:0.3s;
+}
+
+.platforms a:hover{
+    color:#ff0000;
+    transform:scale(1.2);
+    text-shadow:0 0 18px #ff0000;
+}
+
+.btn-retour{
+    position:fixed;
+    top:25px;
+    left:25px;
+    padding:12px 28px;
+    border:2px solid white;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.btn-retour:hover{
+    background:white;
+    color:black;
+}
+</style>
+</head>
+
+<body>
+
+<a href="nproduction.html" class="btn-retour">← RETOUR</a>
+
+<div class="container">
+
+    <h1 id="main-title">🎤 OG Glock</h1>
+    <div class="subtitle" id="subtitle">Drill • Intensité • Détermination</div>
+
+    <div class="description" id="desc">
+
+        <p>
+        Artiste rap émergent, OG Glock évolue dans l’univers puissant de la drill.
+        </p>
+
+        <p>
+        Influencé par l’émotion de Juice WRLD et XXXTentacion,
+        puis marqué par l’énergie brute de Pop Smoke et le style incisif de Central Cee,
+        il forge une identité mêlant intensité, authenticité et détermination.
+        </p>
+
+        <p>
+        Avec des titres comme <strong>Corridor</strong>, <strong>No Stop</strong> et <strong>404 Industry</strong>,
+        il pose les bases de sa carrière et affirme son entrée officielle dans la drill.
+        </p>
+
+        <p class="highlight">
+        🚀 Ambition : viser une carrière internationale,
+        marquer durablement la scène hip-hop
+        et se produire sur des scènes mythiques comme le légendaire
+        Stade Félix-Houphouët-Boigny,
+        avant de conquérir l’Europe, l’Afrique et l’Amérique.
+        </p>
+
+    </div>
+
+    <!-- Plateformes -->
+    <div class="platforms" id="platforms">
+
+        <a href="https://open.spotify.com/artist/34SCZw3FUdKZ4sYvXbeH2P?si=pQWMwJYVQrqCQBFP-UU_2w" target="_blank">
+            <i class="fab fa-spotify"></i>
+        </a>
+
+        <a href="https://music.apple.com/ng/artist/og-glock/1819034362" target="_blank">
+            <i class="fab fa-apple"></i>
+        </a>
+
+        <a href="https://youtube.com/@the_oggang?si=oFMicP2pshyJKafq" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+        <a href="https://www.instagram.com/og.glock.888?igsh=ejQwMTExOHg0MTR0" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@og.glock2?_r=1&_t=ZS-94K1rCB6InY" target="_blank">
+            <i class="fab fa-tiktok"></i>
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+window.addEventListener('load', () => {
+
+    const title = document.getElementById('main-title');
+    const subtitle = document.getElementById('subtitle');
+    const desc = document.getElementById('desc');
+    const platforms = document.getElementById('platforms');
+
+    title.style.opacity = '1';
+    title.style.transform = 'translateY(0)';
+    subtitle.style.opacity = '1';
+
+    setTimeout(()=>{
+        desc.style.opacity = '1';
+        desc.style.transform = 'translateY(0)';
+    },700);
+
+    setTimeout(()=>{
+        platforms.style.opacity = '1';
+        platforms.style.transform = 'translateY(0)';
+    },1400);
+});
+</script>
+
+</body>
+</html>
