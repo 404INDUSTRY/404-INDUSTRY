@@ -2,169 +2,140 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>404 INDUSTRY</title>
-
+<title>Accueil – 404 INDUSTRY</title>
 <link rel="icon" type="image/png" href="logo.png">
-<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&display=swap" rel="stylesheet">
 <style>
 body{
     margin:0;
     padding:0;
-    font-family:'Anton', sans-serif;
-    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('logo.png');
+    font-family:'Montserrat', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.95)), url('logo.png');
     background-size:cover;
     background-position:center;
-    background-repeat:no-repeat;
+    background-attachment:fixed;
     color:white;
-    text-align:center;
+    overflow-x:hidden;
 }
 
-/* HERO */
 .container{
-    height:75vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-}
-
-h1{
-    font-size:80px;
-    letter-spacing:4px;
-    text-shadow:
-        0 0 5px #000,
-        0 0 15px #000,
-        0 0 40px #000;
-}
-
-.subtitle{
-    font-size:24px;
-    color:#ccc;
-    margin-top:10px;
-    text-shadow:0 0 5px #000;
-}
-
-/* BOUTON UNIVERS */
-.btn-univers{
-    margin-top:60px;
-    padding:22px 75px;
-    font-size:32px;
-    color:#fff;
-    border:2px solid #fff;
-    border-radius:12px;
-    text-decoration:none;
-    letter-spacing:3px;
-    box-shadow:
-        0 0 20px #ffffff,
-        0 0 40px #00f2ff,
-        0 0 80px #00f2ff;
-    transition:0.3s;
-}
-
-.btn-univers:hover{
-    background:#fff;
-    color:#000;
-    box-shadow:
-        0 0 40px #ffffff,
-        0 0 80px #00f2ff,
-        0 0 150px #00f2ff;
-}
-
-/* SECTIONS */
-.section{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
     padding:60px 20px;
 }
 
-.section h2{
-    font-size:45px;
-    margin-bottom:20px;
-    text-shadow:0 0 10px #000;
+#main-title{
+    font-size:80px;
+    margin-top:100px;
+    color:#fff;
+    text-shadow:0 0 25px #fff,0 0 50px #00ffff;
+    opacity:0;
+    transform:translateY(-100px);
+    transition:1.5s ease;
 }
 
-.section p{
-    font-size:18px;
-    color:#ccc;
-    line-height:1.6;
-    text-shadow:0 0 5px #000;
+#subtitle{
+    margin-top:15px;
+    font-style:italic;
+    font-size:22px;
+    opacity:0;
+    transition:1.5s ease;
 }
 
-/* CADRES */
-.cadres{
+#cta-btn{
+    display:inline-block;
+    margin-top:60px;
+    padding:18px 50px;
+    font-size:22px;
+    border:2px solid #0ff;
+    border-radius:50px;
+    color:#0ff;
+    text-decoration:none;
+    text-shadow:0 0 15px #0ff;
+    opacity:0;
+    transform:translateY(50px);
+    transition:1.2s ease;
+}
+
+#cta-btn:hover{
+    background:#0ff;
+    color:black;
+    text-shadow:0 0 25px #0ff;
+}
+
+.card-section{
+    margin-top:120px;
     display:flex;
-    flex-direction:column;
-    gap:30px;
-    max-width:1200px;
-    margin:50px auto;
-    padding:0 20px;
-}
-
-@media(min-width:768px){
-    .cadres{ flex-direction:row; }
-}
-
-.cadre{
-    background:rgba(0,0,0,0.7);
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 0 20px #000, 0 0 60px #000;
-    flex:1;
-}
-
-/* FOOTER */
-.footer{
-    background:rgba(0,0,0,0.85);
-    padding:25px;
-    font-size:14px;
-    color:#aaa;
-}
-
-/* ===== WARP EFFECT ===== */
-
-#warp{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:black;
-    display:none;
     justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s ease;
+}
+
+.card{
+    width:280px;
+    height:140px;
+    background:rgba(255,255,255,0.05);
+    border:2px solid #0ff;
+    border-radius:25px;
+    display:flex;
     align-items:center;
-    overflow:hidden;
-    z-index:9999;
+    justify-content:center;
+    font-size:22px;
+    font-weight:700;
+    cursor:pointer;
+    text-shadow:0 0 10px #0ff;
+    transition:0.4s;
 }
 
-#warp::before{
-    content:"";
-    position:absolute;
-    width:200%;
-    height:200%;
-    background:radial-gradient(white 1px, transparent 1px);
-    background-size:4px 4px;
-    animation:warpMove 2.5s linear forwards;
-    opacity:0.6;
+.card:hover{
+    background:rgba(0,255,255,0.1);
+    box-shadow:0 0 20px #0ff,0 0 40px #0ff;
 }
 
-@keyframes warpMove{
-    from{ transform:scale(1); }
-    to{ transform:scale(5); }
+footer{
+    margin-top:100px;
+    padding:40px 20px;
+    text-align:center;
+    background:#000;
+    color:white;
+    font-family:'Montserrat', sans-serif;
 }
 
-.warp-text{
-    position:relative;
-    font-size:45px;
-    letter-spacing:5px;
-    animation:glitch 0.4s infinite;
-    z-index:10;
+footer a{
+    text-decoration:none;
+    font-weight:700;
 }
 
-@keyframes glitch{
-    0%{ text-shadow:2px 2px #00f2ff; }
-    25%{ text-shadow:-2px -2px #ff00ff; }
-    50%{ text-shadow:2px -2px #00f2ff; }
-    75%{ text-shadow:-2px 2px #ff00ff; }
-    100%{ text-shadow:2px 2px #00f2ff; }
+footer .mail{
+    color:#ff00ff;
+    text-shadow:0 0 8px #ff00ff;
+}
+
+footer .whatsapp{
+    color:#25D366;
+    text-shadow:0 0 10px #25D366;
+}
+
+footer .instagram{
+    color:#C13584;
+    text-shadow:0 0 10px #C13584;
+}
+
+footer .tiktok{
+    color:#FF0050;
+    background:#000;
+    padding:6px 14px;
+    border-radius:12px;
+    text-shadow:0 0 10px #FF0050;
+}
+
+footer .x{
+    color:#1DA1F2;
+    text-shadow:0 0 10px #1DA1F2;
 }
 </style>
 </head>
@@ -172,65 +143,55 @@ h1{
 <body>
 
 <div class="container">
-    <h1>404 INDUSTRY</h1>
-    <p class="subtitle">VISION • DISCIPLINE • IMPACT</p>
+    <h1 id="main-title">404 INDUSTRY</h1>
+    <div id="subtitle">Vision • Discipline • Impact</div>
 
-    <a href="#" class="btn-univers" onclick="startWarp(event)">
-        PLONGE DANS L'UNIVERS DU 404
-    </a>
-</div>
+    <a href="univers404.html" id="cta-btn">Plonge dans l'univers 404</a>
 
-<div class="section">
-    <h2>À propos</h2>
-    <p>
-        404 INDUSTRY est un label indépendant émergent dans la scène musicale ivoirienne,
-        créé le 02/01/2025. Nous imposons notre style unique, brut et authentique
-        pour marquer la scène locale et internationale.
-    </p>
-</div>
-
-<div class="cadres">
-    <div class="cadre">
-        <h2>404 INDUSTRY</h2>
-        <p>
-            Un mouvement musical né pour imposer une nouvelle énergie.
-            Discipline, stratégie et puissance.
-        </p>
-    </div>
-
-    <div class="cadre">
-        <h2>Notre But</h2>
-        <p>
-            S’imposer brutalement avec une identité forte
-            et inspirer la nouvelle génération sans compromis.
-        </p>
+    <div class="card-section" id="cards">
+        <div class="card" onclick="window.location.href='404industry.html'">404 INDUSTRY</div>
+        <div class="card" onclick="window.location.href='nproduction.html'">N PRODUCTION</div>
+        <div class="card" onclick="window.location.href='rmanagement.html'">R MANAGEMENT</div>
     </div>
 </div>
 
-<div class="footer">
-© 2026 404 INDUSTRY — All Rights Reserved
-</div>
+<!-- FOOTER -->
+<footer>
+    <div style="font-size:18px; margin-bottom:15px;">
+        📧 Nous contacter : <a href="mailto:404industryy@gmail.com" class="mail">404industryy@gmail.com</a>
+    </div>
 
-<!-- WARP CINEMATIQUE -->
-<div id="warp">
-    <div class="warp-text">ENTERING 404...</div>
-</div>
+    <div style="font-size:18px; margin-top:20px; margin-bottom:10px;">🔗 Nous suivre :</div>
 
-<audio id="warpSound">
-    <source src="https://assets.mixkit.co/active_storage/sfx/2003/2003-preview.mp3" type="audio/mpeg">
-</audio>
+    <div style="display:flex; justify-content:center; gap:25px; flex-wrap:wrap; margin-top:10px;">
+        <a href="https://whatsapp.com/channel/0029Vb620ywBFLgdVRgIyX1a" target="_blank" class="whatsapp">WHATSAPP</a>
+        <a href="https://www.instagram.com/404__industry?igsh=NWVidDdvbDU2aXZm" target="_blank" class="instagram">INSTAGRAM</a>
+        <a href="https://www.tiktok.com/@404.industry?_r=1&_d=f01ai23f9f59e7&sec_uid=MS4wLjABAAAAq92vvRQ1ytS-ZqEZNkr2vvK_M6kXOOB2jhfWI2bm4hyjCD8nqvxti1TgsrzR6NAs&share_author_id=7576016858341377026&sharer_language=en&source=h5_m&u_code=eemc9kc9d6jic4&timestamp=1772368987&user_id=7384790560836977670&sec_user_id=MS4wLjABAAAAdx_AXYClNVhRe9p8mZMPvCWkrP_e6-eoDX3K_3jbnT7Z6kebDquSGiLY8UAUMAhW&item_author_type=2&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7608278589851256594&share_link_id=e38e0fe7-87c9-48dc-9237-463da8bd1801&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b6880%2Cb5836&social_share_type=5&enable_checksum=1" target="_blank" class="tiktok">TIKTOK</a>
+        <a href="https://x.com/404_INDUSTRY" target="_blank" class="x">X</a>
+    </div>
+</footer>
 
 <script>
-function startWarp(e){
-    e.preventDefault();
-    const warp=document.getElementById("warp");
-    const sound=document.getElementById("warpSound");
-    warp.style.display="flex";
-    sound.play();
-    setTimeout(function(){
-        window.location.href="univers404.html";
-    },2500);
-}
+window.addEventListener('load', () => {
+    const title = document.getElementById('main-title');
+    const subtitle = document.getElementById('subtitle');
+    const btn = document.getElementById('cta-btn');
+    const cards = document.getElementById('cards');
+
+    title.style.opacity='1';
+    title.style.transform='translateY(0)';
+    subtitle.style.opacity='1';
+
+    setTimeout(()=>{
+        btn.style.opacity='1';
+        btn.style.transform='translateY(0)';
+    },700);
+
+    setTimeout(()=>{
+        cards.style.opacity='1';
+        cards.style.transform='translateY(0)';
+    },1200);
+});
 </script>
 
 </body>
