@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>404 INDUSTRY</title>
+
 <link rel="icon" type="image/png" href="logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
@@ -11,18 +12,17 @@ body{
     margin:0;
     padding:0;
     font-family:'Anton', sans-serif;
-    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('logo.png');
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('logo.png');
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
     color:white;
     text-align:center;
-    overflow:hidden;
 }
 
-/* CONTENU */
+/* HERO */
 .container{
-    height:100vh;
+    height:75vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -30,52 +30,141 @@ body{
 }
 
 h1{
-    font-size:85px;
-    letter-spacing:5px;
-    text-shadow:0 0 40px #000;
+    font-size:80px;
+    letter-spacing:4px;
+    text-shadow:
+        0 0 5px #000,
+        0 0 15px #000,
+        0 0 40px #000;
 }
 
 .subtitle{
-    font-size:22px;
+    font-size:24px;
     color:#ccc;
-    margin-top:15px;
-    letter-spacing:3px;
+    margin-top:10px;
+    text-shadow:0 0 5px #000;
 }
 
+/* BOUTON UNIVERS */
 .btn-univers{
-    margin-top:70px;
+    margin-top:60px;
     padding:22px 75px;
-    font-size:28px;
+    font-size:32px;
     color:#fff;
     border:2px solid #fff;
     border-radius:12px;
     text-decoration:none;
     letter-spacing:3px;
-    box-shadow:0 0 35px #00f2ff;
+    box-shadow:
+        0 0 20px #ffffff,
+        0 0 40px #00f2ff,
+        0 0 80px #00f2ff;
     transition:0.3s;
 }
 
 .btn-univers:hover{
-    background:white;
-    color:black;
+    background:#fff;
+    color:#000;
+    box-shadow:
+        0 0 40px #ffffff,
+        0 0 80px #00f2ff,
+        0 0 150px #00f2ff;
 }
 
-/* TRANSITION ECRAN NOIR */
-#transition{
+/* SECTIONS */
+.section{
+    padding:60px 20px;
+}
+
+.section h2{
+    font-size:45px;
+    margin-bottom:20px;
+    text-shadow:0 0 10px #000;
+}
+
+.section p{
+    font-size:18px;
+    color:#ccc;
+    line-height:1.6;
+    text-shadow:0 0 5px #000;
+}
+
+/* CADRES */
+.cadres{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    max-width:1200px;
+    margin:50px auto;
+    padding:0 20px;
+}
+
+@media(min-width:768px){
+    .cadres{ flex-direction:row; }
+}
+
+.cadre{
+    background:rgba(0,0,0,0.7);
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 0 20px #000, 0 0 60px #000;
+    flex:1;
+}
+
+/* FOOTER */
+.footer{
+    background:rgba(0,0,0,0.85);
+    padding:25px;
+    font-size:14px;
+    color:#aaa;
+}
+
+/* ===== WARP EFFECT ===== */
+
+#warp{
     position:fixed;
     top:0;
     left:0;
     width:100%;
     height:100%;
     background:black;
-    opacity:0;
-    pointer-events:none;
-    transition:opacity 1s ease;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
     z-index:9999;
 }
 
-#transition.active{
-    opacity:1;
+#warp::before{
+    content:"";
+    position:absolute;
+    width:200%;
+    height:200%;
+    background:radial-gradient(white 1px, transparent 1px);
+    background-size:4px 4px;
+    animation:warpMove 2.5s linear forwards;
+    opacity:0.6;
+}
+
+@keyframes warpMove{
+    from{ transform:scale(1); }
+    to{ transform:scale(5); }
+}
+
+.warp-text{
+    position:relative;
+    font-size:45px;
+    letter-spacing:5px;
+    animation:glitch 0.4s infinite;
+    z-index:10;
+}
+
+@keyframes glitch{
+    0%{ text-shadow:2px 2px #00f2ff; }
+    25%{ text-shadow:-2px -2px #ff00ff; }
+    50%{ text-shadow:2px -2px #00f2ff; }
+    75%{ text-shadow:-2px 2px #ff00ff; }
+    100%{ text-shadow:2px 2px #00f2ff; }
 }
 </style>
 </head>
@@ -86,23 +175,61 @@ h1{
     <h1>404 INDUSTRY</h1>
     <p class="subtitle">VISION • DISCIPLINE • IMPACT</p>
 
-    <a href="#" class="btn-univers" onclick="goToPage(event)">
+    <a href="#" class="btn-univers" onclick="startWarp(event)">
         PLONGE DANS L'UNIVERS DU 404
     </a>
 </div>
 
-<div id="transition"></div>
+<div class="section">
+    <h2>À propos</h2>
+    <p>
+        404 INDUSTRY est un label indépendant émergent dans la scène musicale ivoirienne,
+        créé le 02/01/2025. Nous imposons notre style unique, brut et authentique
+        pour marquer la scène locale et internationale.
+    </p>
+</div>
+
+<div class="cadres">
+    <div class="cadre">
+        <h2>404 INDUSTRY</h2>
+        <p>
+            Un mouvement musical né pour imposer une nouvelle énergie.
+            Discipline, stratégie et puissance.
+        </p>
+    </div>
+
+    <div class="cadre">
+        <h2>Notre But</h2>
+        <p>
+            S’imposer brutalement avec une identité forte
+            et inspirer la nouvelle génération sans compromis.
+        </p>
+    </div>
+</div>
+
+<div class="footer">
+© 2026 404 INDUSTRY — All Rights Reserved
+</div>
+
+<!-- WARP CINEMATIQUE -->
+<div id="warp">
+    <div class="warp-text">ENTERING 404...</div>
+</div>
+
+<audio id="warpSound">
+    <source src="https://assets.mixkit.co/active_storage/sfx/2003/2003-preview.mp3" type="audio/mpeg">
+</audio>
 
 <script>
-function goToPage(e){
+function startWarp(e){
     e.preventDefault();
-
-    const transition = document.getElementById("transition");
-    transition.classList.add("active");
-
+    const warp=document.getElementById("warp");
+    const sound=document.getElementById("warpSound");
+    warp.style.display="flex";
+    sound.play();
     setTimeout(function(){
-        window.location.href = "univers404.html";
-    },1000);
+        window.location.href="univers404.html";
+    },2500);
 }
 </script>
 
