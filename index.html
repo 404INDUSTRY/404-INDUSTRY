@@ -1,198 +1,157 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Accueil – 404 INDUSTRY</title>
-<link rel="icon" type="image/png" href="logo.png">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&display=swap" rel="stylesheet">
-<style>
-body{
-    margin:0;
-    padding:0;
-    font-family:'Montserrat', sans-serif;
-    background: linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.95)), url('logo.png');
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-    color:white;
-    overflow-x:hidden;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 INDUSTRY</title>
+  <style>
+    /* Style général */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+    }
 
-.container{
-    max-width:1000px;
-    margin:auto;
-    text-align:center;
-    padding:60px 20px;
-}
+    /* Logo et titre */
+    .header {
+      text-align: center;
+      padding: 50px 20px 20px 20px;
+      position: relative;
+    }
 
-#main-title{
-    font-size:80px;
-    margin-top:100px;
-    color:#fff;
-    text-shadow:0 0 25px #fff,0 0 50px #00ffff;
-    opacity:0;
-    transform:translateY(-100px);
-    transition:1.5s ease;
-}
+    .header h1 {
+      font-size: 4em;
+      color: #fff;
+      text-shadow: 0 0 10px #fff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
+      margin: 0;
+    }
 
-#subtitle{
-    margin-top:15px;
-    font-style:italic;
-    font-size:22px;
-    opacity:0;
-    transition:1.5s ease;
-}
+    /* Bouton principal */
+    .main-button {
+      display: block;
+      margin: 40px auto;
+      padding: 20px 40px;
+      font-size: 1.8em;
+      color: #00ffff;
+      background-color: transparent;
+      border: 2px solid #00ffff;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s;
+      text-align: center;
+      text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+    }
 
-#cta-btn{
-    display:inline-block;
-    margin-top:60px;
-    padding:18px 50px;
-    font-size:22px;
-    border:2px solid #0ff;
-    border-radius:50px;
-    color:#0ff;
-    text-decoration:none;
-    text-shadow:0 0 15px #0ff;
-    opacity:0;
-    transform:translateY(50px);
-    transition:1.2s ease;
-}
+    .main-button:hover {
+      background-color: #00ffff;
+      color: #000;
+      text-shadow: none;
+    }
 
-#cta-btn:hover{
-    background:#0ff;
-    color:black;
-    text-shadow:0 0 25px #0ff;
-}
+    /* Cadres à propos / but */
+    .cards {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin: 50px 20px;
+    }
 
-.card-section{
-    margin-top:120px;
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
-    opacity:0;
-    transform:translateY(50px);
-    transition:1s ease;
-}
+    .card {
+      background-color: #111;
+      border: 2px solid #00ffff;
+      border-radius: 15px;
+      padding: 30px;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
 
-.card{
-    width:280px;
-    height:140px;
-    background:rgba(255,255,255,0.05);
-    border:2px solid #0ff;
-    border-radius:25px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:22px;
-    font-weight:700;
-    cursor:pointer;
-    text-shadow:0 0 10px #0ff;
-    transition:0.4s;
-}
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00ffff;
+    }
 
-.card:hover{
-    background:rgba(0,255,255,0.1);
-    box-shadow:0 0 20px #0ff,0 0 40px #0ff;
-}
+    .card h2 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+      text-shadow: 0 0 5px #00ffff;
+    }
 
-footer{
-    margin-top:100px;
-    padding:40px 20px;
-    text-align:center;
-    background:#000;
-    color:white;
-    font-family:'Montserrat', sans-serif;
-}
+    .card p {
+      font-size: 1em;
+      line-height: 1.5em;
+    }
 
-footer a{
-    text-decoration:none;
-    font-weight:700;
-}
+    /* Footer avec logos */
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
 
-footer .mail{
-    color:#ff00ff;
-    text-shadow:0 0 8px #ff00ff;
-}
+    .footer-logos a {
+      margin: 0 10px;
+      display: inline-block;
+      transition: transform 0.3s;
+    }
 
-footer .whatsapp{
-    color:#25D366;
-    text-shadow:0 0 10px #25D366;
-}
+    .footer-logos a:hover {
+      transform: scale(1.2);
+    }
 
-footer .instagram{
-    color:#C13584;
-    text-shadow:0 0 10px #C13584;
-}
+    .footer-logos img {
+      width: 40px;
+      height: 40px;
+    }
 
-footer .tiktok{
-    color:#FF0050;
-    background:#000;
-    padding:6px 14px;
-    border-radius:12px;
-    text-shadow:0 0 10px #FF0050;
-}
-
-footer .x{
-    color:#1DA1F2;
-    text-shadow:0 0 10px #1DA1F2;
-}
-</style>
+    .footer-email {
+      margin-bottom: 20px;
+      font-size: 1em;
+      color: #fff;
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
-    <h1 id="main-title">404 INDUSTRY</h1>
-    <div id="subtitle">Vision • Discipline • Impact</div>
+  <!-- Header / Logo -->
+  <div class="header">
+    <h1>404 INDUSTRY</h1>
+  </div>
 
-    <a href="univers404.html" id="cta-btn">Plonge dans l'univers 404</a>
+  <!-- Bouton Plonge dans l'univers 404 -->
+  <a href="univers404.html" class="main-button">Plonge dans l'univers 404</a>
 
-    <div class="card-section" id="cards">
-        <div class="card" onclick="window.location.href='404industry.html'">404 INDUSTRY</div>
-        <div class="card" onclick="window.location.href='nproduction.html'">N PRODUCTION</div>
-        <div class="card" onclick="window.location.href='rmanagement.html'">R MANAGEMENT</div>
+  <!-- Cadres à propos / notre but -->
+  <div class="cards">
+    <div class="card">
+      <h2>À propos</h2>
+      <p>404 INDUSTRY est un label indépendant émergent dans la scène musicale ivoirienne, créé le 02/01/2025. Une structure qui combine vision, énergie street et puissance mélodique pour imposer des artistes et inspirer la nouvelle génération.</p>
     </div>
-</div>
-
-<!-- FOOTER -->
-<footer>
-    <div style="font-size:18px; margin-bottom:15px;">
-        📧 Nous contacter : <a href="mailto:404industryy@gmail.com" class="mail">404industryy@gmail.com</a>
+    <div class="card">
+      <h2>Notre but</h2>
+      <p>Notre objectif : s’imposer brutalement avec une identité forte et violente, inspirer la nouvelle génération et construire une marque respectée et influente sur la scène internationale.</p>
     </div>
+  </div>
 
-    <div style="font-size:18px; margin-top:20px; margin-bottom:10px;">🔗 Nous suivre :</div>
-
-    <div style="display:flex; justify-content:center; gap:25px; flex-wrap:wrap; margin-top:10px;">
-        <a href="https://whatsapp.com/channel/0029Vb620ywBFLgdVRgIyX1a" target="_blank" class="whatsapp">WHATSAPP</a>
-        <a href="https://www.instagram.com/404__industry?igsh=NWVidDdvbDU2aXZm" target="_blank" class="instagram">INSTAGRAM</a>
-        <a href="https://www.tiktok.com/@404.industry?_r=1&_d=f01ai23f9f59e7&sec_uid=MS4wLjABAAAAq92vvRQ1ytS-ZqEZNkr2vvK_M6kXOOB2jhfWI2bm4hyjCD8nqvxti1TgsrzR6NAs&share_author_id=7576016858341377026&sharer_language=en&source=h5_m&u_code=eemc9kc9d6jic4&timestamp=1772368987&user_id=7384790560836977670&sec_user_id=MS4wLjABAAAAdx_AXYClNVhRe9p8mZMPvCWkrP_e6-eoDX3K_3jbnT7Z6kebDquSGiLY8UAUMAhW&item_author_type=2&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7608278589851256594&share_link_id=e38e0fe7-87c9-48dc-9237-463da8bd1801&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b6880%2Cb5836&social_share_type=5&enable_checksum=1" target="_blank" class="tiktok">TIKTOK</a>
-        <a href="https://x.com/404_INDUSTRY" target="_blank" class="x">X</a>
+  <!-- Footer avec email et logos -->
+  <footer>
+    <div class="footer-email">
+      Nous contacter : <a href="mailto:404industryy@gmail.com" style="color:#00ffff;">404industryy@gmail.com</a>
     </div>
-</footer>
-
-<script>
-window.addEventListener('load', () => {
-    const title = document.getElementById('main-title');
-    const subtitle = document.getElementById('subtitle');
-    const btn = document.getElementById('cta-btn');
-    const cards = document.getElementById('cards');
-
-    title.style.opacity='1';
-    title.style.transform='translateY(0)';
-    subtitle.style.opacity='1';
-
-    setTimeout(()=>{
-        btn.style.opacity='1';
-        btn.style.transform='translateY(0)';
-    },700);
-
-    setTimeout(()=>{
-        cards.style.opacity='1';
-        cards.style.transform='translateY(0)';
-    },1200);
-});
-</script>
+    <div class="footer-logos">
+      <a href="https://whatsapp.com/channel/0029Vb620ywBFLgdVRgIyX1a" target="_blank"><img src="logo_whatsapp.png" alt="WhatsApp"></a>
+      <a href="https://www.instagram.com/404__industry?igsh=NWVidDdvbDU2aXZm" target="_blank"><img src="logo_instagram.png" alt="Instagram"></a>
+      <a href="https://www.tiktok.com/@404.industry" target="_blank"><img src="logo_tiktok.png" alt="TikTok"></a>
+      <a href="https://x.com/404_INDUSTRY" target="_blank"><img src="logo_x.png" alt="X"></a>
+    </div>
+  </footer>
 
 </body>
 </html>
