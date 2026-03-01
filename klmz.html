@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>KLMZ – 404 INDUSTRY</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    padding:60px 20px;
+    font-family:'Montserrat', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.96), rgba(0,0,0,0.96)), url('logo.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+    overflow-x:hidden;
+}
+
+.container{
+    max-width:950px;
+    margin:auto;
+    text-align:center;
+}
+
+#main-title{
+    font-size:60px;
+    margin-top:120px;
+    color:#9d00ff;
+    opacity:0;
+    transform:translateY(-120px);
+    transition:1.5s ease;
+    text-shadow:0 0 20px #9d00ff,0 0 45px #5a0099;
+}
+
+.subtitle{
+    margin-top:15px;
+    font-style:italic;
+    opacity:0;
+    transition:1.5s ease;
+}
+
+.description{
+    margin-top:70px;
+    line-height:2.1;
+    font-size:18px;
+    opacity:0;
+    transform:translateY(50px);
+    transition:1.2s ease;
+}
+
+.highlight{
+    margin-top:30px;
+    font-weight:600;
+    color:#9d00ff;
+    text-shadow:0 0 12px #9d00ff;
+}
+
+.platforms{
+    margin-top:70px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:35px;
+    font-size:30px;
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s ease;
+}
+
+.platforms a{
+    color:white;
+    transition:0.3s;
+}
+
+.platforms a:hover{
+    color:#9d00ff;
+    transform:scale(1.2);
+    text-shadow:0 0 18px #9d00ff;
+}
+
+.btn-retour{
+    position:fixed;
+    top:25px;
+    left:25px;
+    padding:12px 28px;
+    border:2px solid white;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.btn-retour:hover{
+    background:white;
+    color:black;
+}
+</style>
+</head>
+
+<body>
+
+<a href="nproduction.html" class="btn-retour">← RETOUR</a>
+
+<div class="container">
+
+    <h1 id="main-title">🎤 KLMZ</h1>
+    <div class="subtitle" id="subtitle">Drill FR • Culture Ivoirienne • Vision</div>
+
+    <div class="description" id="desc">
+
+        <p>
+        Originaire d’Abidjan, KLMZ découvre le rap dès l’adolescence.
+        À seulement 15 ans, il est profondément marqué par Nekfeu,
+        une révélation qui l’incite à prendre la plume et à se lancer sérieusement dans la musique en 2022.
+        </p>
+
+        <p>
+        Après une phase d’influences intenses — notamment inspiré par Freeze Corleone —
+        il comprend rapidement qu’un artiste ne marque pas son époque en copiant,
+        mais en affirmant sa propre vision.
+        Cette prise de conscience devient un tournant décisif.
+        </p>
+
+        <p>
+        Avec l’émergence de la nouvelle vague, il découvre Kerchak et MiG,
+        et s’oriente naturellement vers la drill française,
+        un style brut et percutant qui correspond à son énergie.
+        </p>
+
+        <p class="highlight">
+        Depuis 2024, KLMZ façonne un univers personnel
+        en fusionnant drill FR et culture ivoirienne 🇨🇮.
+        Son approche est sombre, réfléchie et authentique —
+        une identité artistique en pleine construction,
+        portée par l’ambition de laisser une empreinte durable.
+        </p>
+
+    </div>
+
+    <!-- Plateformes -->
+    <div class="platforms" id="platforms">
+
+        <a href="https://open.spotify.com/artist/4LduaRyEbX29ehUes7C4US?si=9HoQqSJqRfm76xENPgXhQg" target="_blank">
+            <i class="fab fa-spotify"></i>
+        </a>
+
+        <a href="https://music.apple.com/ci/artist/klmz/1844311261" target="_blank">
+            <i class="fab fa-apple"></i>
+        </a>
+
+        <a href="https://youtube.com/@klmzz19?si=rJsJhbTbDyVo4TFL" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@klmz.19?_r=1&_t=ZS-94K4ghg96d5" target="_blank">
+            <i class="fab fa-tiktok"></i>
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+window.addEventListener('load', () => {
+
+    const title = document.getElementById('main-title');
+    const subtitle = document.getElementById('subtitle');
+    const desc = document.getElementById('desc');
+    const platforms = document.getElementById('platforms');
+
+    title.style.opacity = '1';
+    title.style.transform = 'translateY(0)';
+    subtitle.style.opacity = '1';
+
+    setTimeout(()=>{
+        desc.style.opacity = '1';
+        desc.style.transform = 'translateY(0)';
+    },700);
+
+    setTimeout(()=>{
+        platforms.style.opacity = '1';
+        platforms.style.transform = 'translateY(0)';
+    },1400);
+});
+</script>
+
+</body>
+</html>
