@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>HASSAN ESCOBAR – 404 INDUSTRY</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    padding:60px 20px;
+    font-family:'Montserrat', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.96), rgba(0,0,0,0.96)), url('logo.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+    overflow-x:hidden;
+}
+
+.container{
+    max-width:950px;
+    margin:auto;
+    text-align:center;
+}
+
+#main-title{
+    font-size:60px;
+    margin-top:120px;
+    color:#ffd700;
+    opacity:0;
+    transform:translateY(-120px);
+    transition:1.5s ease;
+    text-shadow:0 0 20px #ffd700,0 0 45px #b8860b;
+}
+
+.subtitle{
+    margin-top:15px;
+    font-style:italic;
+    opacity:0;
+    transition:1.5s ease;
+}
+
+.description{
+    margin-top:70px;
+    line-height:2.1;
+    font-size:18px;
+    opacity:0;
+    transform:translateY(50px);
+    transition:1.2s ease;
+}
+
+.highlight{
+    margin-top:35px;
+    font-weight:700;
+    font-size:20px;
+    color:#ffd700;
+    text-shadow:0 0 15px #ffd700;
+}
+
+.platforms{
+    margin-top:70px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:35px;
+    font-size:30px;
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s ease;
+}
+
+.platforms a{
+    color:white;
+    transition:0.3s;
+}
+
+.platforms a:hover{
+    color:#ffd700;
+    transform:scale(1.2);
+    text-shadow:0 0 18px #ffd700;
+}
+
+.btn-retour{
+    position:fixed;
+    top:25px;
+    left:25px;
+    padding:12px 28px;
+    border:2px solid white;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.btn-retour:hover{
+    background:white;
+    color:black;
+}
+</style>
+</head>
+
+<body>
+
+<a href="nproduction.html" class="btn-retour">← RETOUR</a>
+
+<div class="container">
+
+    <h1 id="main-title">🎤 HASSAN ESCOBAR</h1>
+    <div class="subtitle" id="subtitle">Treich Trap • Élégance • Puissance</div>
+
+    <div class="description" id="desc">
+
+        <p>
+        Hassan Escobar se démarque par sa vibe Treich Trap,
+        un mélange unique de trap moderne et de rythmes captivants
+        qui capture l’attention dès la première écoute.
+        </p>
+
+        <p>
+        Son univers musical est à la fois puissant et élégant,
+        combinant énergie brute et créativité réfléchie
+        pour imposer sa signature dans le paysage urbain.
+        </p>
+
+        <p>
+        Ambitieux et déterminé, il avance avec la volonté
+        de marquer son époque et d’emmener sa musique toujours plus loin.
+        </p>
+
+        <p class="highlight">
+        🔥 La trap n’a jamais été aussi raffinée et percutante que dans ses mains.
+        </p>
+
+    </div>
+
+    <!-- Plateformes -->
+    <div class="platforms" id="platforms">
+
+        <a href="https://x.com/Hassan_Escobar_" target="_blank">
+            <i class="fab fa-x-twitter"></i>
+        </a>
+
+        <a href="https://youtube.com/@heconnexionactive?si=GZGCVj7u87QSkPfg" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+        <a href="https://music.apple.com/ci/artist/hassan-escobar/1663343451" target="_blank">
+            <i class="fab fa-apple"></i>
+        </a>
+
+        <a href="https://www.instagram.com/hassan_escobar?igsh=MWZ6MXh0Y2FlcTVzMA==" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://open.spotify.com/artist/70FkOcJWe5GzC6QUWTtgqD?si=BqieLhJ4TFe4iJVrrQPqeQ" target="_blank">
+            <i class="fab fa-spotify"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@hassan_escobar?_r=1&_t=ZS-94K6OzGGCna" target="_blank">
+            <i class="fab fa-tiktok"></i>
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+window.addEventListener('load', () => {
+
+    const title = document.getElementById('main-title');
+    const subtitle = document.getElementById('subtitle');
+    const desc = document.getElementById('desc');
+    const platforms = document.getElementById('platforms');
+
+    title.style.opacity = '1';
+    title.style.transform = 'translateY(0)';
+    subtitle.style.opacity = '1';
+
+    setTimeout(()=>{
+        desc.style.opacity = '1';
+        desc.style.transform = 'translateY(0)';
+    },700);
+
+    setTimeout(()=>{
+        platforms.style.opacity = '1';
+        platforms.style.transform = 'translateY(0)';
+    },1400);
+});
+</script>
+
+</body>
+</html>
