@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>SA D BO – 404 INDUSTRY</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    padding:60px 20px;
+    font-family:'Montserrat', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.96), rgba(0,0,0,0.96)), url('logo.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+    overflow-x:hidden;
+}
+
+.container{
+    max-width:950px;
+    margin:auto;
+    text-align:center;
+}
+
+#main-title{
+    font-size:60px;
+    margin-top:120px;
+    color:#ff1a1a;
+    opacity:0;
+    transform:translateY(-120px);
+    transition:1.5s ease;
+    text-shadow:0 0 15px #ff1a1a,0 0 40px #ff0000;
+}
+
+.subtitle{
+    margin-top:10px;
+    font-style:italic;
+    opacity:0;
+    transition:1.5s ease;
+}
+
+.description{
+    margin-top:70px;
+    line-height:2.1;
+    font-size:18px;
+    opacity:0;
+    transform:translateY(50px);
+    transition:1.2s ease;
+}
+
+.highlight{
+    margin-top:30px;
+    font-weight:600;
+    color:#ff1a1a;
+    text-shadow:0 0 10px #ff1a1a;
+}
+
+.platforms{
+    margin-top:70px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:35px;
+    font-size:30px;
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s ease;
+}
+
+.platforms a{
+    color:white;
+    transition:0.3s;
+}
+
+.platforms a:hover{
+    color:#ff1a1a;
+    transform:scale(1.2);
+    text-shadow:0 0 15px #ff1a1a;
+}
+
+.btn-retour{
+    position:fixed;
+    top:25px;
+    left:25px;
+    padding:12px 28px;
+    border:2px solid white;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.btn-retour:hover{
+    background:white;
+    color:black;
+}
+</style>
+</head>
+
+<body>
+
+<a href="404artists.html" class="btn-retour">← RETOUR</a>
+
+<div class="container">
+
+    <h1 id="main-title">🔥 SA D BO 🔥</h1>
+    <div class="subtitle" id="subtitle">Aka le Qohelet… aka l’intellectuel qui mélange.</div>
+
+    <div class="description" id="desc">
+
+        <p>Ici Sa D Bo.</p>
+
+        <p>
+        Un esprit qui navigue entre le français et le nouchi,  
+        entre la réflexion et la vibration.
+        </p>
+
+        <p>
+        À la base ?  
+        Juste l’envie de parler… avec une mélodie en fond.  
+        Rendre la pensée plus vivante.  
+        Plus habitée.
+        </p>
+
+        <p>
+        Aujourd’hui, certains disent slam revisité,  
+        d’autres parlent de rap abidjanais.
+        </p>
+
+        <p class="highlight">
+        👉🏾 « C’est un amas d’opinions bien articulé sur une prod. »
+        </p>
+
+        <p>
+        Il parle de Lui,  
+        de Dieu,  
+        et du Monde.
+        </p>
+
+        <p>
+        Des doutes.  
+        Des vérités.  
+        Des contradictions humaines.
+        </p>
+
+        <p class="highlight">
+        Pas de masque.  
+        Pas de personnage.  
+        Juste une plume, une voix… et une profondeur.
+        </p>
+
+        <p>
+        Alors viens.  
+        Prends place.  
+        Écoute.
+        </p>
+
+        <p class="highlight">
+        🎙️ Sa D Bo  
+        L’intellectuel qui mélange.  
+        Présent chez 404 INDUSTRY en distribution.
+        </p>
+
+    </div>
+
+    <!-- Plateformes -->
+    <div class="platforms" id="platforms">
+
+        <a href="https://open.spotify.com/album/1v21whF9bLrxvHmC344kRq?si=UnoVEalvSmmOhR9OQdOhWQ" target="_blank">
+            <i class="fab fa-spotify"></i>
+        </a>
+
+        <a href="https://music.apple.com/ci/album/28-octobre-single/1872557093" target="_blank">
+            <i class="fab fa-apple"></i>
+        </a>
+
+        <a href="https://www.youtube.com/@SADBO0408" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+        <a href="https://link.deezer.com/s/32jl5kR1NRz7lWREPcglY" target="_blank">
+            <i class="fas fa-music"></i>
+        </a>
+
+        <a href="https://audiomack.com/bbird1784/song/28-octobre" target="_blank">
+            <i class="fas fa-headphones"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@sadbo0804" target="_blank">
+            <i class="fab fa-tiktok"></i>
+        </a>
+
+        <a href="https://www.instagram.com/sadbo0.408" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+window.addEventListener('load', () => {
+
+    const title = document.getElementById('main-title');
+    const subtitle = document.getElementById('subtitle');
+    const desc = document.getElementById('desc');
+    const platforms = document.getElementById('platforms');
+
+    title.style.opacity = '1';
+    title.style.transform = 'translateY(0)';
+
+    subtitle.style.opacity = '1';
+
+    setTimeout(()=>{
+        desc.style.opacity = '1';
+        desc.style.transform = 'translateY(0)';
+    },700);
+
+    setTimeout(()=>{
+        platforms.style.opacity = '1';
+        platforms.style.transform = 'translateY(0)';
+    },1400);
+});
+</script>
+
+</body>
+</html>
