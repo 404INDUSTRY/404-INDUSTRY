@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>KM29 – R MANAGEMENT</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    padding:60px 20px;
+    font-family:'Montserrat', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.95)), url('logo.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+    overflow-x:hidden;
+}
+
+.container{
+    max-width:950px;
+    margin:auto;
+    text-align:center;
+}
+
+#main-title{
+    font-size:60px;
+    margin-top:120px;
+    color:#00ffff;
+    opacity:0;
+    transform:translateY(-120px);
+    transition:1.5s ease;
+    text-shadow:0 0 20px #00ffff,0 0 45px #00cccc;
+}
+
+.subtitle{
+    margin-top:15px;
+    font-style:italic;
+    opacity:0;
+    transition:1.5s ease;
+}
+
+.description{
+    margin-top:50px;
+    line-height:2;
+    font-size:18px;
+    opacity:0;
+    transform:translateY(50px);
+    transition:1.2s ease;
+}
+
+.highlight{
+    margin-top:35px;
+    font-weight:700;
+    font-size:20px;
+    color:#00ffff;
+    text-shadow:0 0 15px #00ffff;
+}
+
+.platforms{
+    margin-top:50px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:35px;
+    font-size:30px;
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s ease;
+}
+
+.platforms a{
+    color:white;
+    transition:0.3s;
+}
+
+.platforms a:hover{
+    color:#00ffff;
+    transform:scale(1.2);
+    text-shadow:0 0 18px #00ffff;
+}
+
+.btn-retour{
+    position:fixed;
+    top:25px;
+    left:25px;
+    padding:12px 28px;
+    border:2px solid white;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.btn-retour:hover{
+    background:white;
+    color:black;
+}
+</style>
+</head>
+
+<body>
+
+<a href="rmanagement.html" class="btn-retour">← RETOUR</a>
+
+<div class="container">
+
+    <h1 id="main-title">🎤 KM29</h1>
+    <div class="subtitle" id="subtitle">Artiste – R MANAGEMENT</div>
+
+    <div class="description" id="desc">
+
+        <p>
+        KM29 est l’un des talents montants de la new wave drill. Avec une vibe sombre et percutante, il marque la scène par sa détermination et son style gang authentique. Chaque morceau est une preuve de son ambition : imposer son art et laisser une empreinte durable dans la drill.
+        </p>
+
+        <p class="highlight">
+        🔥 La nouvelle génération a trouvé son représentant avec KM29.
+        </p>
+
+    </div>
+
+    <!-- Plateformes -->
+    <div class="platforms" id="platforms">
+
+        <a href="https://music.apple.com/ci/artist/km29/1816897873" target="_blank">
+            <i class="fab fa-apple"></i>
+        </a>
+
+        <a href="https://open.spotify.com/artist/4g5EeLqwRdfydPnIz5qHYz?si=8KAw3Hg_RYC3wC0om95lWA" target="_blank">
+            <i class="fab fa-spotify"></i>
+        </a>
+
+        <a href="https://www.instagram.com/mrarracheurdepoucave29?utm_source=qr&igsh=MXI4dmE0cDF0bjR1aQ==" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@km.29?_r=1&_t=ZS-94K91xWlhpc" target="_blank">
+            <i class="fab fa-tiktok"></i>
+        </a>
+
+        <a href="https://www.snapchat.com/add/dead.poucave29?share_id=vxIXU4kq0bE&locale=fr-FR" target="_blank">
+            <i class="fab fa-snapchat"></i>
+        </a>
+
+        <a href="https://x.com/EvridayB" target="_blank">
+            <i class="fab fa-x-twitter"></i>
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+window.addEventListener('load', () => {
+
+    const title = document.getElementById('main-title');
+    const subtitle = document.getElementById('subtitle');
+    const desc = document.getElementById('desc');
+    const platforms = document.getElementById('platforms');
+
+    title.style.opacity = '1';
+    title.style.transform = 'translateY(0)';
+    subtitle.style.opacity = '1';
+
+    setTimeout(()=>{
+        desc.style.opacity = '1';
+        desc.style.transform = 'translateY(0)';
+    },700);
+
+    setTimeout(()=>{
+        platforms.style.opacity = '1';
+        platforms.style.transform = 'translateY(0)';
+    },1400);
+});
+</script>
+
+</body>
+</html>
