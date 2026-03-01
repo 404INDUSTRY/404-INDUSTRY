@@ -2,11 +2,9 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>YOUNG GENIUS – R MANAGEMENT</title>
+<title>Young Genius – R MANAGEMENT</title>
 <link rel="icon" type="image/png" href="logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <style>
 body{
     margin:0;
@@ -29,11 +27,11 @@ body{
 #main-title{
     font-size:60px;
     margin-top:120px;
-    color:#00ff88;
+    color:#ff00ff;
     opacity:0;
     transform:translateY(-120px);
     transition:1.5s ease;
-    text-shadow:0 0 20px #00ff88,0 0 45px #00cc77;
+    text-shadow:0 0 20px #ff00ff,0 0 45px #cc00cc;
 }
 
 .subtitle{
@@ -56,31 +54,8 @@ body{
     margin-top:35px;
     font-weight:700;
     font-size:20px;
-    color:#00ff88;
-    text-shadow:0 0 15px #00ff88;
-}
-
-.platforms{
-    margin-top:50px;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:35px;
-    font-size:30px;
-    opacity:0;
-    transform:translateY(40px);
-    transition:1s ease;
-}
-
-.platforms a{
-    color:white;
-    transition:0.3s;
-}
-
-.platforms a:hover{
-    color:#00ff88;
-    transform:scale(1.2);
-    text-shadow:0 0 18px #00ff88;
+    color:#ff00ff;
+    text-shadow:0 0 15px #ff00ff;
 }
 
 .btn-retour{
@@ -108,8 +83,8 @@ body{
 
 <div class="container">
 
-    <h1 id="main-title">🎹 YOUNG GENIUS</h1>
-    <div class="subtitle" id="subtitle">Beatmaker & Ingénieur Son</div>
+    <h1 id="main-title">🎹 Young Genius</h1>
+    <div class="subtitle" id="subtitle">Beatmaker & Ingénieur Son – R MANAGEMENT</div>
 
     <div class="description" id="desc">
 
@@ -123,23 +98,6 @@ body{
 
     </div>
 
-    <!-- Plateformes -->
-    <div class="platforms" id="platforms">
-
-        <a href="https://open.spotify.com/artist/3WEl2omjT6uHlT0t4CjNlC?si=nyZ6JJ2sSc-RbwVVguYceg" target="_blank">
-            <i class="fab fa-spotify"></i>
-        </a>
-
-        <a href="https://music.apple.com/cm/artist/leroi/1816965619" target="_blank">
-            <i class="fab fa-apple"></i>
-        </a>
-
-        <a href="https://www.tiktok.com/@younggenius?_r=1" target="_blank">
-            <i class="fab fa-tiktok"></i>
-        </a>
-
-    </div>
-
 </div>
 
 <script>
@@ -148,7 +106,6 @@ window.addEventListener('load', () => {
     const title = document.getElementById('main-title');
     const subtitle = document.getElementById('subtitle');
     const desc = document.getElementById('desc');
-    const platforms = document.getElementById('platforms');
 
     title.style.opacity = '1';
     title.style.transform = 'translateY(0)';
@@ -158,11 +115,6 @@ window.addEventListener('load', () => {
         desc.style.opacity = '1';
         desc.style.transform = 'translateY(0)';
     },700);
-
-    setTimeout(()=>{
-        platforms.style.opacity = '1';
-        platforms.style.transform = 'translateY(0)';
-    },1400);
 });
 </script>
 
