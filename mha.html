@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>MHA – 404 INDUSTRY</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    padding:60px 20px;
+    font-family:'Montserrat', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.96), rgba(0,0,0,0.96)), url('logo.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+    overflow-x:hidden;
+}
+
+.container{
+    max-width:950px;
+    margin:auto;
+    text-align:center;
+}
+
+#main-title{
+    font-size:60px;
+    margin-top:120px;
+    color:#00c3ff;
+    opacity:0;
+    transform:translateY(-120px);
+    transition:1.5s ease;
+    text-shadow:0 0 20px #00c3ff,0 0 45px #0066ff;
+}
+
+.subtitle{
+    margin-top:15px;
+    font-style:italic;
+    opacity:0;
+    transition:1.5s ease;
+}
+
+.description{
+    margin-top:70px;
+    line-height:2.1;
+    font-size:18px;
+    opacity:0;
+    transform:translateY(50px);
+    transition:1.2s ease;
+}
+
+.highlight{
+    margin-top:30px;
+    font-weight:600;
+    color:#00c3ff;
+    text-shadow:0 0 12px #00c3ff;
+}
+
+.platforms{
+    margin-top:70px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:35px;
+    font-size:30px;
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s ease;
+}
+
+.platforms a{
+    color:white;
+    transition:0.3s;
+}
+
+.platforms a:hover{
+    color:#00c3ff;
+    transform:scale(1.2);
+    text-shadow:0 0 18px #00c3ff;
+}
+
+.btn-retour{
+    position:fixed;
+    top:25px;
+    left:25px;
+    padding:12px 28px;
+    border:2px solid white;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.btn-retour:hover{
+    background:white;
+    color:black;
+}
+</style>
+</head>
+
+<body>
+
+<a href="nproduction.html" class="btn-retour">← RETOUR</a>
+
+<div class="container">
+
+    <h1 id="main-title">🎤✨ MHA</h1>
+    <div class="subtitle" id="subtitle">Nouvelle Génération • Ambition • Côte d’Ivoire 🇨🇮</div>
+
+    <div class="description" id="desc">
+
+        <p>
+        MHA incarne la fraîcheur et l’audace de la nouvelle génération du rap ivoirien.
+        Jeune, déterminé et passionné, il construit un univers où l’énergie moderne
+        rencontre la profondeur et la sincérité de la culture ivoirienne.
+        </p>
+
+        <p>
+        Porté par une vision claire, MHA ne vise pas seulement le succès local :
+        il ambitionne de représenter la 🇨🇮 Côte d’Ivoire sur la scène internationale
+        et d’inspirer toute une génération d’artistes.
+        </p>
+
+        <p class="highlight">
+        🔥 Un talent en pleine ascension.<br>
+        🌍 Une ambition sans limites.<br>
+        🎶 Une identité forte et authentique.
+        </p>
+
+        <p>
+        Suivez son évolution — l’histoire ne fait que commencer.
+        </p>
+
+    </div>
+
+    <!-- Plateformes -->
+    <div class="platforms" id="platforms">
+
+        <a href="https://open.spotify.com/artist/3WEl2omjT6uHlT0t4CjNlC?si=nyZ6JJ2sSc-RbwVVguYceg" target="_blank">
+            <i class="fab fa-spotify"></i>
+        </a>
+
+        <a href="https://music.apple.com/ga/artist/mha/1877890877" target="_blank">
+            <i class="fab fa-apple"></i>
+        </a>
+
+        <a href="https://youtube.com/@mhasenateur4875?si=ZFY99vjs24m6BGmV" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@senateurmha?_r=1&_t=ZS-94K4JwifEvA" target="_blank">
+            <i class="fab fa-tiktok"></i>
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+window.addEventListener('load', () => {
+
+    const title = document.getElementById('main-title');
+    const subtitle = document.getElementById('subtitle');
+    const desc = document.getElementById('desc');
+    const platforms = document.getElementById('platforms');
+
+    title.style.opacity = '1';
+    title.style.transform = 'translateY(0)';
+    subtitle.style.opacity = '1';
+
+    setTimeout(()=>{
+        desc.style.opacity = '1';
+        desc.style.transform = 'translateY(0)';
+    },700);
+
+    setTimeout(()=>{
+        platforms.style.opacity = '1';
+        platforms.style.transform = 'translateY(0)';
+    },1400);
+});
+</script>
+
+</body>
+</html>
